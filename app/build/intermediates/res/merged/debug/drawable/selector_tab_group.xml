@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/tab_group_s" android:state_checked="true" />
     <item android:drawable="@drawable/tab_group" />
 
-</selector><!-- From: file:/D:/android%20studio%20workspace/Fragment/fragment/src/main/res/drawable/selector_tab_group.xml --><!-- From: file:/Users/li/360/Heshida_android/Heshida2/app/src/main/res/drawable/selector_tab_group.xml -->
+</selector><!-- From: file:/D:/android%20studio%20workspace/Fragment/fragment/src/main/res/drawable/selector_tab_group.xml --><!-- From: file:/Users/li/360/Heshida_android/Heshida/app/src/main/res/drawable/selector_tab_group.xml -->

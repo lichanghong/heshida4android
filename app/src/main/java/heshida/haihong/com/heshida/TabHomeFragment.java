@@ -20,7 +20,7 @@ import cn.domob.android.ads.AdEventListener;
 import cn.domob.android.ads.AdManager;
 import cn.domob.android.ads.AdView;
 
-import heshida.haihong.com.heshida.home.JokeActivity;
+import heshida.haihong.com.heshida.home.joke;
 
 /**
  * Created by admin on 13-11-23.
@@ -38,8 +38,6 @@ public class TabHomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, null);
         _view = view;
-//        TextView textView = (TextView) view.findViewById(R.id.home_txt);
-//        textView.setText("fragement test");
 
 //        添加广告页
         //initADView(view);
@@ -57,9 +55,9 @@ public class TabHomeFragment extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(_view.getContext(),JokeActivity.class);
+                    Intent intent = new Intent(_view.getContext(),joke.class);
                     startActivity(intent);
-                    Toast.makeText(v.getContext(),"show joke",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(v.getContext(),"show joke",Toast.LENGTH_LONG).show();
                 }
             });
     }

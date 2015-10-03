@@ -168,10 +168,6 @@ public class TopBar extends RelativeLayout {
 
     @SuppressWarnings("deprecation")
     private void initRightButton(Context context, TypedArray ta) {
-//        rightTextColor = ta
-//                .getColorStateList(R.styleable.Topbar_rightTextColor);
-//        rightTextSize = ta.getDimension(R.styleable.Topbar_rightTextSize, 0);
-//        rightBackground = ta.getDrawable(R.styleable.Topbar_rightBackground);
         rightMargin = ta.getDimension(R.styleable.Topbar_rightMargin, 0);
 
         rightButton = new Button(context);
