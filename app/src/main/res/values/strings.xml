@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">河南师范</string>
+
+    <string name="home_top_title">河南师范大学</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_joke">joke</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_group">Group</string>
+</resources>
