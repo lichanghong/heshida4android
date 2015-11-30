@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/Users/li/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-2fa01df939c1171612c152dd79255c97cb4bbe2f.jar" />
-    </item>
-    <item
-        jar="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-3d8843abccd59608190e18ae58e7b390fa1600e1.jar" />
-    </item>
-    <item
-        jar="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/pre-dexed/debug/classes-8dafcbaa38353a37a4a0c755b5ed53e0b0a99d97.jar" />
-    </item>
-    <item
-        jar="/Users/li/360/Heshida_android/Heshida2/app/libs/domob_android_sdk.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/domob_android_sdk.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="d7d2e383de169a752a9ff470d2ff711a1cdc111c">
-        <dex dex="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/pre-dexed/debug/domob_android_sdk-429a35d7aa84d6c2978cf3cb5d096bf3f10d693a.jar" />
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/domob_android_sdk-f1a7fd42a632f4b8c4b08fcbcd53a6269cf3e7d5.jar" />
     </item>
     <item
-        jar="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-8c99f5b7703bb356c0dd1a139bbf9b7ba8b08a92.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/classes-e25d1f77da81358d2fc0418a4e53826adb2dfa2e.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-f26da63086c9b8ef7a50016bdd2d595d0a5873c0.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="/Users/li/360/Heshida_android/Heshida2/app/build/intermediates/pre-dexed/debug/classes-9ac9c8723113a72338e94eab3cbe4af75b0f75e0.jar" />
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/classes-b09eafd7df4c63a38a9783aa67f0215e51ab3aaa.jar" />
     </item>
 
 </items>

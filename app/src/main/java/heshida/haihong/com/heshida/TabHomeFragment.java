@@ -1,7 +1,5 @@
 package heshida.haihong.com.heshida;
 
-
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
@@ -13,14 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import cn.domob.android.ads.AdEventListener;
 import cn.domob.android.ads.AdManager;
 import cn.domob.android.ads.AdView;
-
-import heshida.haihong.com.heshida.home.joke;
+import heshida.haihong.com.heshida.home.JokeActivity;
 
 /**
  * Created by admin on 13-11-23.
@@ -55,7 +50,7 @@ public class TabHomeFragment extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(_view.getContext(),joke.class);
+                    Intent intent = new Intent(_view.getContext(),JokeActivity.class);
                     startActivity(intent);
 //                    Toast.makeText(v.getContext(),"show joke",Toast.LENGTH_LONG).show();
                 }

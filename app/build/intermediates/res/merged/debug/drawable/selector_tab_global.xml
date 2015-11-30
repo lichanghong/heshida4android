@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/selector_tab_home" android:state_checked="true" />
     <item android:drawable="@drawable/selector_tab_bg" />
 
-</selector><!-- From: file:/Users/li/360/Heshida_android/Heshida/app/src/main/res/drawable/selector_tab_global.xml -->
+</selector><!-- From: file:/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/res/drawable/selector_tab_global.xml -->
