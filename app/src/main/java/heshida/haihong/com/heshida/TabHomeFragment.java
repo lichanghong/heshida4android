@@ -15,7 +15,12 @@ import android.widget.RelativeLayout;
 import cn.domob.android.ads.AdEventListener;
 import cn.domob.android.ads.AdManager;
 import cn.domob.android.ads.AdView;
+import heshida.haihong.com.heshida.Register.RegisterActivity;
 import heshida.haihong.com.heshida.home.JokeActivity;
+
+
+
+
 
 /**
  * Created by admin on 13-11-23.
@@ -29,12 +34,16 @@ public class TabHomeFragment extends Fragment {
     RelativeLayout _AdContainer;
     AdView _Adview;
 
+
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, null);
         _view = view;
 
-//        添加广告页
+     //        添加广告页
         //initADView(view);
         initView();
         return view;
@@ -50,7 +59,7 @@ public class TabHomeFragment extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(_view.getContext(),JokeActivity.class);
+                    Intent intent = new Intent(_view.getContext(),RegisterActivity.class);
                     startActivity(intent);
 //                    Toast.makeText(v.getContext(),"show joke",Toast.LENGTH_LONG).show();
                 }

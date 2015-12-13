@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/domob_android_sdk.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/android-async-http-1.4.3.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="d7d2e383de169a752a9ff470d2ff711a1cdc111c">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/domob_android_sdk-f1a7fd42a632f4b8c4b08fcbcd53a6269cf3e7d5.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-8c99f5b7703bb356c0dd1a139bbf9b7ba8b08a92.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/classes-e25d1f77da81358d2fc0418a4e53826adb2dfa2e.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-f26da63086c9b8ef7a50016bdd2d595d0a5873c0.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/classes-b09eafd7df4c63a38a9783aa67f0215e51ab3aaa.jar" />
+        sha1="f70e680861fdf9449819003e7799a4e9aca047f8">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.3-f858c31d39a616f1180de88c0bd1b18404b9c194.jar" />
     </item>
 
 </items>

@@ -7,4 +7,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_group">Group</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_my_home">MyHomeActivity</string>
 </resources>

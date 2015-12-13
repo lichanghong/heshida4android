@@ -1,0 +1,72 @@
+package heshida.haihong.com.heshida.Groups;
+
+
+import android.app.Fragment;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.Scroller;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import heshida.haihong.com.heshida.R;
+
+/**
+ * Created by lichanghong on 13-11-23.
+ */
+public class TabGroupFragmentTab extends Fragment {
+
+    private View _view;
+    private ListView mListView;
+    private ArrayAdapter<String>mAdapter;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_group, null);
+        _view = view;
+
+        initView();
+        return view;
+    }
+
+    private void initView() {
+        mListView = (ListView) _view.findViewById(R.id.group_listView);
+
+        mListView.setAdapter(mAdapter);
+
+        String[] data = {
+                "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
+                "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
+                "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
+                "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
+        };
+
+
+        final List<String> d = new ArrayList<String>(Arrays.asList(data));
+
+        mAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,d);
+
+        mListView.setAdapter(mAdapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mAdapter.clear();
+                String[] data2 = {
+                        "sfdsfsdf","sdfasf"
+                };
+                final List<String> dd = new ArrayList<String>(Arrays.asList(data2));
+                mAdapter.addAll(dd);
+
+            }
+        });
+    }
+
+}

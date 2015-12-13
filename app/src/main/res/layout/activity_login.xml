@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <heshida.haihong.com.heshida.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topbarRegister"
+        tools:background="#ffffff"
+        custom:title="Title1"
+        custom:titleTextColor="@android:color/black"
+        custom:titleTextSize="16sp"
+        >
+    </heshida.haihong.com.heshida.TopBar>
+
+    <TableLayout
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:stretchColumns="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:text="手机号码"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                />
+            <EditText
+                android:hint="手机号码"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="密    码"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                />
+            <EditText
+                android:hint="密码"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:password="true"
+                />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -235,6 +235,9 @@
     <eat-comment/>
     <string name="title_activity_group">Group</string>
     <string name="title_activity_joke">joke</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_my_home">MyHomeActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
     <!-- From: file:/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

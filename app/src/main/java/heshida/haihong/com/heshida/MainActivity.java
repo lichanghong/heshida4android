@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.TabActivity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,6 +20,9 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.Toast;
 
+import heshida.haihong.com.heshida.Register.LoginActivity;
+import heshida.haihong.com.heshida.Register.RegisterActivity;
+import heshida.haihong.com.heshida.home.MyHomeActivity;
 
 
 public class MainActivity extends Activity {
@@ -68,7 +72,6 @@ public class MainActivity extends Activity {
                 topbar1.getLeftButton().setVisibility(View.VISIBLE);
                 topbar1.getRightButton().setVisibility(View.VISIBLE);
                 topbar1.setTitle("河南师范大学");
-
             }
             break;
             case 2:
@@ -133,8 +136,12 @@ public class MainActivity extends Activity {
 
             @Override
             public void rightClick() {
-                Toast.makeText(MainActivity.this, "right", Toast.LENGTH_SHORT)
-                        .show();
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                if (true) //已经登陆
+                {
+                    intent.setClass(MainActivity.this,MyHomeActivity.class);
+                }
+                startActivity(intent);
             }
         });
 
