@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+import android.widget.Button;
 
 import heshida.haihong.com.heshida.R;
+import heshida.haihong.com.heshida.TopBar;
 
 public class MyHomeActivity extends Activity {
+    TopBar mTopBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,18 @@ public class MyHomeActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_my_home);
+        initView();
+        initData();
+    }
+
+    private void initData() {
+        mTopBar.setTitle("我的");
+    }
+
+    private void initView() {
+        mTopBar = (TopBar) findViewById(R.id.topbarRegister);
+
+
     }
 
 

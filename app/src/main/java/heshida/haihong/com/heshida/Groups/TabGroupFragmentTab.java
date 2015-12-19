@@ -43,7 +43,7 @@ public class TabGroupFragmentTab extends Fragment {
         mListView.setAdapter(mAdapter);
 
         String[] data = {
-                "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
+                "武术散打协会","援孤社协会",
                 "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
                 "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
                 "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",

@@ -2,6 +2,9 @@ package heshida.haihong.com.heshida.Utils.Location;
 
 //location
 import android.content.Context;
+import android.content.Intent;
+import android.provider.Settings;
+import android.widget.Toast;
 
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -13,25 +16,33 @@ public class LocationManager {
 
     public LocationClient mLocationClient = null;
     public BDLocationListener myListener = new MyLocationListener();
-    Context mcontext;
 
     public LocationManager(Context mcontext) {
-        this.mcontext = mcontext;
-        onCreate(mcontext);//定位初始化
+        initLocation(mcontext);//定位初始化
     }
 
-    public void startOffLineLocation(Context context)
+    public void start()
+    {
+        mLocationClient.start();
+    }
+
+    public void stop()
+    {
+        mLocationClient.stop();
+    }
+
+    public void startOffLineLocation()
     {
         mLocationClient.start();
         mLocationClient.requestOfflineLocation();
     }
 
-    public void startLocation(Context context)
+    public void startLocation()
     {
         mLocationClient.start();
         mLocationClient.requestLocation();
     }
-    public void startNotifyLocation(Context context)
+    public void startNotifyLocation()
     {
         mLocationClient.start();
         mLocationClient.requestNotifyLocation();
@@ -42,18 +53,14 @@ public class LocationManager {
         mLocationClient.stop();
     }
 
-    public void onCreate(Context context) {
-        mLocationClient = new LocationClient(context.getApplicationContext());     //声明LocationClient类
+    private void initLocation(Context context){
+        mLocationClient = new LocationClient(context);     //声明LocationClient类
         mLocationClient.registerLocationListener( myListener );    //注册监听函数
-        initLocation();
-    }
-
-    private void initLocation(){
         LocationClientOption option = new LocationClientOption();
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy
         );//可选，默认高精度，设置定位模式，高精度，低功耗，仅设备
         option.setCoorType("bd09ll");//可选，默认gcj02，设置返回的定位结果坐标系
-        int span=1000;
+        int span=0;
         option.setScanSpan(span);//可选，默认0，即仅定位一次，设置发起定位请求的间隔需要大于等于1000ms才是有效的
         option.setIsNeedAddress(true);//可选，设置是否需要地址信息，默认不需要
         option.setOpenGps(true);//可选，默认false,设置是否使用gps

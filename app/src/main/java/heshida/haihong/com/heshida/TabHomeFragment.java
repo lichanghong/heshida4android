@@ -16,10 +16,7 @@ import cn.domob.android.ads.AdEventListener;
 import cn.domob.android.ads.AdManager;
 import cn.domob.android.ads.AdView;
 import heshida.haihong.com.heshida.Register.RegisterActivity;
-import heshida.haihong.com.heshida.home.JokeActivity;
-
-
-
+import heshida.haihong.com.heshida.Utils.Location.LocationManager;
 
 
 /**
@@ -33,7 +30,7 @@ public class TabHomeFragment extends Fragment {
     View _view;
     RelativeLayout _AdContainer;
     AdView _Adview;
-
+    LocationManager mLocationManager;
 
 
 
@@ -44,9 +41,15 @@ public class TabHomeFragment extends Fragment {
         _view = view;
 
      //        添加广告页
-        //initADView(view);
+        initADView(view);
         initView();
+        initData();
         return view;
+    }
+
+    private void initData() {
+        mLocationManager = new LocationManager(getActivity().getApplicationContext());
+        mLocationManager.start();
     }
 
     private void initView() {

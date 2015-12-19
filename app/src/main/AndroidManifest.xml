@@ -10,12 +10,6 @@
         <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
     </intent-filter>
 
-    <service
-        android:name="com.baidu.location.f"
-        android:enabled="true"
-        android:process=":remote" >
-    </service>
-
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -44,6 +38,12 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="IuXeHlEsBav5pCTl9ETezIM3" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
 
         <activity
             android:name=".MainActivity"

@@ -25,68 +25,68 @@ action#android.net.conn.CONNECTIVITY_CHANGE
 ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:10:9-71
 	android:name
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:10:17-68
-service#com.baidu.location.f
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:13:5-17:15
-	android:process
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:16:9-34
-	android:enabled
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:15:9-31
-	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:14:9-44
 uses-permission#android.permission.INTERNET
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:19:5-67
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:13:5-67
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:19:22-64
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:13:22-64
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:21:5-81
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:15:5-81
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:21:22-78
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:15:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:23:5-79
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:23:22-76
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:17:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:25:5-76
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:19:5-76
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:25:22-73
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:19:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:27:5-79
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:21:5-79
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:27:22-76
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:21:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:29:5-76
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:23:5-76
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:29:22-73
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:23:22-73
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:31:5-75
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:25:5-75
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:31:22-72
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:25:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:33:5-81
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:27:5-81
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:33:22-78
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:27:22-78
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:37:5-84
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:31:5-84
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:37:22-81
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:31:22-81
 application
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:39:5-73:19
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:33:5-73:19
 MERGED from [com.android.support:appcompat-v7:23.0.0] /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.0] /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:42:9-41
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:36:9-41
 	android:allowBackup
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:40:9-35
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:34:9-35
 	android:icon
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:41:9-43
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:35:9-43
 	android:theme
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:43:9-40
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:37:9-40
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:44:9-46:56
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:38:9-40:56
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:45:13-52
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:39:13-52
 	android:value
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:46:13-53
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:40:13-53
+service#com.baidu.location.f
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:42:9-46:19
+	android:process
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:45:13-38
+	android:enabled
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:44:13-35
+	android:name
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:43:13-48
 activity#heshida.haihong.com.heshida.MainActivity
 ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:48:9-56:20
 	android:label

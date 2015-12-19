@@ -1,27 +1,18 @@
 package heshida.haihong.com.heshida;
 
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TabHost;
-import android.widget.Toast;
-
 import heshida.haihong.com.heshida.Register.LoginActivity;
-import heshida.haihong.com.heshida.Register.RegisterActivity;
 import heshida.haihong.com.heshida.home.MyHomeActivity;
 
 
