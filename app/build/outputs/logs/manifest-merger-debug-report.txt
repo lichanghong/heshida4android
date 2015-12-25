@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:2:1-75:12
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:2:1-87:12
 	xmlns:android
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -62,7 +62,7 @@ ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/sr
 	android:name
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:31:22-81
 application
-ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:33:5-73:19
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:33:5-85:19
 MERGED from [com.android.support:appcompat-v7:23.0.0] /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.0] /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
 	android:label
@@ -127,6 +127,24 @@ ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/sr
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:71:13-59
 	android:name
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:70:13-48
+activity#heshida.haihong.com.heshida.Groups.GroupDetailActivity
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:73:9-76:20
+	android:label
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:75:13-64
+	android:name
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:74:13-55
+activity#heshida.haihong.com.heshida.Main.ScheduleSettingActivity
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:77:9-80:20
+	android:label
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:79:13-68
+	android:name
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:78:13-57
+activity#heshida.haihong.com.heshida.LostAndFound.FoundActivity
+ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:81:9-84:20
+	android:label
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:83:13-57
+	android:name
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:82:13-55
 uses-sdk
 INJECTED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.0] /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43

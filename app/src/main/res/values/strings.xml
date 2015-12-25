@@ -10,4 +10,11 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_my_home">MyHomeActivity</string>
+    <string name="title_activity_group_detail">GroupDetailActivity</string>
+    <string name="title_activity_schedule_setting">ScheduleSettingActivity</string>
+    
+
+    <string name="hostname">http://1.heshida.sinaapp.com</string>
+    <string name="feedback">/User/feedback</string>
+    <string name="title_activity_found">FoundActivity</string>
 </resources>

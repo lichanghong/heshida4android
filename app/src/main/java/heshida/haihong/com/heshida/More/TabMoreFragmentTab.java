@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.jar.Attributes;
 
 import heshida.haihong.com.heshida.R;
+import heshida.haihong.com.heshida.Utils.net.Response;
 
 /**
  * Created by admin on 13-11-23.
@@ -102,10 +103,29 @@ public class TabMoreFragmentTab extends Fragment {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Log.e("feedback",editText.getText().toString());
-                        Toast.makeText(getActivity(),"反馈成功,谢谢您的支持",Toast.LENGTH_LONG).show();
+                        if (editText.getText().toString().isEmpty()) {
+                            Toast.makeText(getActivity(), "请填写反馈内容", Toast.LENGTH_LONG).show();
+                        } else {
+                            FeedbackManager.feedback(_view.getContext(),editText.getText().toString(), new FeedbackResponse() {
+                                @Override
+                                public void feedBack(Response response) {
+                                    super.feedBack(response);
+                                    if (response.getErrno().equals("0")) {
+                                        Toast.makeText(getActivity(), "反馈成功,谢谢您的支持", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                        }
                     }
-                });
+                }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        })
+        ;
         AlertDialog dialog = builder.create();
         dialog.show();
     }

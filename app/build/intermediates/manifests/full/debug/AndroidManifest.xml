@@ -76,6 +76,18 @@
             android:name="heshida.haihong.com.heshida.home.MyHomeActivity"
             android:label="@string/title_activity_my_home" >
         </activity>
+        <activity
+            android:name="heshida.haihong.com.heshida.Groups.GroupDetailActivity"
+            android:label="@string/title_activity_group_detail" >
+        </activity>
+        <activity
+            android:name="heshida.haihong.com.heshida.Main.ScheduleSettingActivity"
+            android:label="@string/title_activity_schedule_setting" >
+        </activity>
+        <activity
+            android:name="heshida.haihong.com.heshida.LostAndFound.FoundActivity"
+            android:label="@string/title_activity_found" >
+        </activity>
     </application>
 
 </manifest>

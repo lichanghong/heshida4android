@@ -89,10 +89,6 @@ public class TopBar extends RelativeLayout {
         buttonMode = ta.getInteger(R.styleable.Topbar_buttonMode, -1);
         background = getResources().getDrawable(R.drawable.topbar);
 
-        //
-        // ta.getDrawable(R.styleable.Topbar_tbackground,R.drawable.topbar);
-        //
-
         switch (buttonMode) {
             case 0:  // 0表示有两个button
                 initLeftButton(context, ta);
@@ -168,16 +164,41 @@ public class TopBar extends RelativeLayout {
 
     @SuppressWarnings("deprecation")
     private void initRightButton(Context context, TypedArray ta) {
+        rightTextColor = ta.getColorStateList(R.styleable.Topbar_rightTextColor);
+        rightTextSize = ta.getDimension(R.styleable.Topbar_rightTextSize, 0);
+        rightBackground = ta.getDrawable(R.styleable.Topbar_rightBackground);
+        rightWidth = ta.getDimension(R.styleable.Topbar_rightWidth, 0);
+        rightHeight = ta.getDimension(R.styleable.Topbar_rightHeight, 0);
         rightMargin = ta.getDimension(R.styleable.Topbar_rightMargin, 0);
+        rightText = ta.getString(R.styleable.Topbar_rightText);
 
         rightButton = new Button(context);
+        if (rightTextColor !=null)
+        {
+            rightButton.setTextColor(rightTextColor);
+        }
+        rightButton.setBackgroundDrawable(rightBackground);
+        rightButton.setText(rightText);
 
-        rightParams = new LayoutParams(40,40);
+        if (0 != rightTextSize)
+            rightButton.setTextSize(rightTextSize);
+        rightParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT);
         rightParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
         rightParams.addRule(RelativeLayout.CENTER_VERTICAL);
-        rightParams.setMargins(0, 20, 30, 0);
+
+        if (0 != rightWidth) {
+            rightParams.width = (int) rightWidth;
+        }
+        if (0 != rightHeight) {
+            rightParams.height = (int) rightHeight;
+        }
+        if (0 != rightMargin) {
+            rightParams.setMargins((int) rightMargin, 0, 5, 0);
+        }
 
         addView(rightButton, rightParams);
+
         rightButton.setOnClickListener(new OnClickListener() {
 
             @Override

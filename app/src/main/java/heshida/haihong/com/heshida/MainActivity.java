@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
 import heshida.haihong.com.heshida.Register.LoginActivity;
 import heshida.haihong.com.heshida.home.MyHomeActivity;
 
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
             case 1:
             {
                 topbar1.getLeftButton().setVisibility(View.VISIBLE);
-                topbar1.getRightButton().setVisibility(View.VISIBLE);
+                topbar1.getRightButton().setVisibility(View.INVISIBLE);
                 topbar1.setTitle("河南师范大学");
             }
             break;
@@ -128,11 +129,16 @@ public class MainActivity extends Activity {
             @Override
             public void rightClick() {
                 Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-                if (true) //已经登陆
+                if (true) //未登陆
                 {
                     intent.setClass(MainActivity.this,MyHomeActivity.class);
+                    startActivity(intent);
                 }
-                startActivity(intent);
+                else
+                {
+                    intent.setClass(MainActivity.this,MyHomeActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

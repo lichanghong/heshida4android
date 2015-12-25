@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <heshida.haihong.com.heshida.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topbarFound"
+        tools:background="#ffffff"
+        custom:buttonMode="left"
+        custom:leftHeight="40dp"
+        custom:leftMargin="12dp"
+        custom:leftWidth="40dp"
+        custom:title="发布失物"
+        custom:titleTextColor="@android:color/black"
+        custom:titleTextSize="16sp"
+        >
+    </heshida.haihong.com.heshida.TopBar>
+
+    <!-- 一句话简介物品  ， 时间，地点，好心人联系方式-->
+
+         <EditText
+            android:id="@+id/found_detail"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:hint="一句话物品简介"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/found_time"
+            android:layout_marginTop="2dp"
+            android:hint="捡到物品大致时间"
+            android:singleLine="true"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/found_location"
+            android:layout_marginTop="2dp"
+            android:hint="捡到物品大致地点地点"
+            android:singleLine="true"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/found_line"
+            android:layout_marginTop="2dp"
+            android:hint="好心人联系方式"
+            android:singleLine="true"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/found_BtnOK"
+            android:text="确定"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+</LinearLayout>

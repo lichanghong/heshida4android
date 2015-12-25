@@ -1,10 +1,14 @@
 package heshida.haihong.com.heshida.Utils.Http;
 
+import android.content.Context;
+
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.BinaryHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+
+import heshida.haihong.com.heshida.R;
 
 /**
  * Created by lichanghong on 12/6/15.
@@ -39,4 +43,16 @@ public class HttpUtil {
     {
         return client;
     }
+
+    //------------------- url --
+    public static String getHostname(Context context)
+    {
+        return context.getString(R.string.hostname);
+    }
+    public static String getFeedbackURL(Context context)
+    {
+        return getHostname(context)+context.getString(R.string.feedback);
+    }
+
+
 }

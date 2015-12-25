@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <heshida.haihong.com.heshida.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topbarSchedule"
+        tools:background="#ffffff"
+        custom:buttonMode="both"
+        custom:leftHeight="40dp"
+        custom:rightHeight="40dp"
+        custom:leftMargin="12dp"
+        custom:leftWidth="40dp"
+        custom:rightWidth="60dp"
+        custom:rightTextColor="#545454"
+        custom:titleTextColor="@android:color/black"
+        custom:titleTextSize="23sp"
+        >
+    </heshida.haihong.com.heshida.TopBar>
+
+    <LinearLayout
+        android:id="@+id/selectWeekLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+        <Button
+            android:id="@+id/selectWeekBtn"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择星期"
+            android:onClick="handleAction"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="长按可修改内容"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/scheduleListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#ccc"
+        android:dividerHeight="1dp"
+        >
+    </ListView>
+
+    <include
+        layout="@layout/schedule_dialogue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></include>
+
+</LinearLayout>

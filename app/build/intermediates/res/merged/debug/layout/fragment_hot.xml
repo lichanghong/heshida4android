@@ -11,19 +11,41 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         >
-
     </RelativeLayout>
 
 
-   <Button
-       android:id="@+id/home_button_joke"
-       android:layout_width="fill_parent"
-       android:layout_height="fill_parent"
-       android:text="热门"
-       android:drawableTop="@drawable/joke"
-
-      />
-
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="失物招领"
+            android:textSize="20sp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="6dp"
+            android:gravity="center_vertical"
+            />
+        <Button
+            android:id="@+id/pickedSomething"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="我捡东西了"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/hotListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#ccc"
+        android:dividerHeight="1dp"
+        >
+    </ListView>
 
 
 </LinearLayout><!-- From: file:/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/res/layout/fragment_hot.xml -->

@@ -3,6 +3,7 @@ package heshida.haihong.com.heshida.Groups;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,7 @@ public class TabGroupFragmentTab extends Fragment {
 
         mListView.setAdapter(mAdapter);
 
-        String[] data = {
+        final String[] data = {
                 "武术散打协会","援孤社协会",
                 "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
                 "aaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbb",
@@ -58,13 +59,14 @@ public class TabGroupFragmentTab extends Fragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mAdapter.clear();
-                String[] data2 = {
-                        "sfdsfsdf","sdfasf"
-                };
-                final List<String> dd = new ArrayList<String>(Arrays.asList(data2));
-                mAdapter.addAll(dd);
-
+                Intent intent = new Intent();
+                intent.setClass(_view.getContext(), GroupDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("groupid", "`123");
+                bundle.putString("groupname", data[position]);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                getActivity().overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.fade_out);
             }
         });
     }

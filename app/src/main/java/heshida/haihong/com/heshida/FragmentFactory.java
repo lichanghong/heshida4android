@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.RadioGroup;
 
 import heshida.haihong.com.heshida.Groups.TabGroupFragmentTab;
+import heshida.haihong.com.heshida.Hot.TabHotFragmentTab;
+import heshida.haihong.com.heshida.Main.TabHomeFragment;
 import heshida.haihong.com.heshida.More.TabMoreFragmentTab;
 
 /**
