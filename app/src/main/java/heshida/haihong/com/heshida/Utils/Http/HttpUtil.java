@@ -8,6 +8,9 @@ import com.loopj.android.http.BinaryHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
+import java.util.HashMap;
+import java.util.Iterator;
+
 import heshida.haihong.com.heshida.R;
 
 /**
@@ -54,5 +57,45 @@ public class HttpUtil {
         return getHostname(context)+context.getString(R.string.feedback);
     }
 
+    public static String saveHotDataURL(Context context)
+    {
+        return getHostname(context)+context.getString(R.string.savelostfound);
+    }
+    public static String getHotDataURL(Context context)
+    {
+        return getHostname(context)+context.getString(R.string.getlostfound);
+    }
+    public static String loadGroupNames(Context context)
+    {
+        return getHostname(context)+"/user/societynames";
+    }
 
+    public static String loadGroupDetail(Context context)
+    {
+        return getHostname(context)+"/user/societydetail";
+    }
+
+    public static String  getUrl(HashMap<String, String> params) {
+         // 添加url参数
+        StringBuilder stringBuilder = new StringBuilder();
+        if (params != null) {
+            Iterator<String> it = params.keySet().iterator();
+            StringBuffer sb = null;
+            while (it.hasNext()) {
+                String key = it.next();
+                String value = params.get(key);
+                if (sb == null) {
+                    sb = new StringBuffer();
+                    sb.append("?");
+                } else {
+                    sb.append("&");
+                }
+                sb.append(key);
+                sb.append("=");
+                sb.append(value);
+            }
+            stringBuilder.append(sb.toString());
+        }
+        return stringBuilder.toString();
+    }
 }

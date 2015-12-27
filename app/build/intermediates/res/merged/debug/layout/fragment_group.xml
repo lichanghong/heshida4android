@@ -4,14 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-   <ListView
-       android:id="@+id/group_listView"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-      >
-   </ListView>
+           <ListView
+               android:id="@+id/group_listView"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:fastScrollEnabled="true"
+               android:focusable="true"
+             >
+           </ListView>
 
-
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout><!-- From: file:/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/res/layout/fragment_group.xml -->

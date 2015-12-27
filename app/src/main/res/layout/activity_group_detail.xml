@@ -20,15 +20,15 @@
     </heshida.haihong.com.heshida.TopBar>
     <EditText
         android:id="@+id/groupdetail_edittext"
-        android:text="sdfsdf]\nsdf\n\n\nsfdsddf\nsfsdf\ndfsfs\n\n\n\nsdfsf\n\nsdf\nsdf\nsdf\\nsdf\sdfsdf]\nsdf\n\n\nsfdsddf\nsfsdf\ndfsfs\n\n\n\nsdfsf\n\nsdf\nsdf\nsdf\\nsdf\sdfsdf]\nsdf\n\n\nsfdsddf\nsfsdf\ndfsfs\n\n\n\nsdfsf\n\nsdf\nsdf\nsdf\\nsdf\sdfsdf]\nsdf\n\n\nsfdsddf\nsfsdf\ndfsfs\n\n\n\nsdfsf\n\nsdf\nsdf\nsdf\\nsdf\n"
         android:layout_width="match_parent"
+        android:text=""
         android:layout_height="0dp"
         android:layout_weight="1"
         android:editable="false"
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="报名参加社团"
-        />
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="报名参加社团"-->
+        <!--/>-->
 </LinearLayout>

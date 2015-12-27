@@ -1,0 +1,113 @@
+package heshida.haihong.com.heshida.Hot;
+
+import android.content.Context;
+
+import com.loopj.android.http.JsonHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import heshida.haihong.com.heshida.Utils.Http.HttpUtil;
+import heshida.haihong.com.heshida.Utils.net.Response;
+
+/**
+ * Created by lichanghong on 12/26/15.
+ */
+public class HotRequest {
+    Context context;
+
+    public void hotContext(Context context) {
+        this.context = context;
+    }
+
+    public void loadHotData(HotResponse response,HashMap<String,String> params ) {
+        loadHotData_(response, params);
+    }
+
+
+    public void saveHotData(HotResponse response,HashMap<String,String> params ) {
+        saveHotData_(response, params);
+    }
+
+    private void saveHotData_(final HotResponse response,HashMap<String,String> params)
+    {
+        String url = HttpUtil.saveHotDataURL(context)+HttpUtil.getUrl(params);
+        HttpUtil.get(url, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(JSONObject jsonObject) {
+                super.onSuccess(jsonObject);
+                hotresult(response, jsonObject);
+            }
+
+            @Override
+            public void onFailure(Throwable throwable, JSONObject jsonObject) {
+                super.onFailure(throwable, jsonObject);
+                hotresult(response, jsonObject);
+            }
+        });
+    }
+
+
+    private void loadHotData_(final HotResponse response,HashMap<String,String> params)
+    {
+        String url = HttpUtil.getHotDataURL(context)+HttpUtil.getUrl(params);
+        HttpUtil.get(url, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(JSONObject jsonObject) {
+                super.onSuccess(jsonObject);
+                loadhotresult(response, jsonObject);
+            }
+            @Override
+            public void onFailure(Throwable throwable, JSONObject jsonObject) {
+                super.onFailure(throwable, jsonObject);
+                loadhotresult(response, jsonObject);
+            }
+        });
+    }
+
+    private void loadhotresult(final HotResponse response,JSONObject jsonObject)
+    {
+        String errno = "", errmsg = "";
+        try {
+            errmsg = jsonObject.getString("errmsg");
+            errno = jsonObject.getString("errno");
+            JSONArray datas =(JSONArray) jsonObject.getJSONArray("data");
+            List<HotModel> models = new ArrayList<>();
+            for (int i = 0; i < datas.length(); i++) {
+                HotModel model = new HotModel();
+                JSONObject obj = (JSONObject) datas.get(i);
+                model.setLostid(obj.getString("lostid"));
+                model.setTitle(obj.getString("title"));
+                model.setBlocked(obj.getString("blocked"));
+                model.setFoundtime(obj.getString("foundtime"));
+                model.setLocation(obj.getString("location"));
+                model.setLine(obj.getString("line"));
+                models.add(model);
+            }
+
+            Response response1 = new Response(errno, errmsg);
+            response1.setData(models);
+            response.loadHotData(response1);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void hotresult(final HotResponse response,JSONObject jsonObject)
+    {
+        String errno = "", errmsg = "";
+        try {
+            errmsg = jsonObject.getString("errmsg");
+            errno = jsonObject.getString("errno");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Response response1 = new Response(errno, errmsg);
+        response.saveHotData(response1);
+    }
+
+}

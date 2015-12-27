@@ -26,14 +26,17 @@
             android:id="@+id/found_detail"
             android:layout_marginTop="2dp"
             android:singleLine="true"
+             android:maxLength="50"
             android:hint="一句话物品简介"
-            android:textSize="12dp"
+             android:textSize="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
             android:id="@+id/found_time"
             android:layout_marginTop="2dp"
             android:hint="捡到物品大致时间"
+            android:maxLength="40"
+            android:maxLines="1"
             android:singleLine="true"
             android:textSize="12dp"
             android:layout_width="match_parent"
@@ -42,6 +45,7 @@
             android:id="@+id/found_location"
             android:layout_marginTop="2dp"
             android:hint="捡到物品大致地点地点"
+            android:maxLength="40"
             android:singleLine="true"
             android:textSize="12dp"
             android:layout_width="match_parent"
@@ -53,12 +57,14 @@
             android:hint="好心人联系方式"
             android:singleLine="true"
             android:textSize="12dp"
+            android:maxLength="30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/found_BtnOK"
             android:text="确定"
+            android:background="@drawable/shape"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

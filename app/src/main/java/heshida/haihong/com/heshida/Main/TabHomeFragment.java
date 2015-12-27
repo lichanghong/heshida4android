@@ -31,7 +31,7 @@ public class TabHomeFragment extends Fragment {
     View _view;
     RelativeLayout _AdContainer;
     AdView _Adview;
-    LocationManager mLocationManager;
+//    LocationManager mLocationManager;
     WebView _mWebView;
 
 
@@ -50,8 +50,8 @@ public class TabHomeFragment extends Fragment {
 
     private void initData() {
         //定位
-        mLocationManager = new LocationManager(getActivity().getApplicationContext());
-        mLocationManager.start();
+//        mLocationManager = new LocationManager(getActivity().getApplicationContext());
+//        mLocationManager.start();
         //webview
         _mWebView.getSettings().setJavaScriptEnabled(true);
         _mWebView.loadUrl("http://www.henannu.edu.cn/");
