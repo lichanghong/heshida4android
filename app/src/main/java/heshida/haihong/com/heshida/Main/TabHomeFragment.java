@@ -130,6 +130,8 @@ public class TabHomeFragment extends Fragment {
 
             }
 
+
+
             @Override
             public Context onAdRequiresCurrentContext() {
                 Log.i("domob", "onAdRequiresCurrentContext");

@@ -61,6 +61,14 @@ public class HotRequest {
                 loadhotresult(response, jsonObject);
             }
             @Override
+            protected void handleFailureMessage(Throwable throwable, String s) {
+                super.handleFailureMessage(throwable, s);
+                JSONObject obj = new JSONObject();
+                Response response1 = new Response("1", "网络连接失败");
+                response.loadHotData(response1);
+
+            }
+            @Override
             public void onFailure(Throwable throwable, JSONObject jsonObject) {
                 super.onFailure(throwable, jsonObject);
                 loadhotresult(response, jsonObject);

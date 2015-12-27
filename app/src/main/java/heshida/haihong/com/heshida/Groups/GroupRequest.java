@@ -1,6 +1,7 @@
 package heshida.haihong.com.heshida.Groups;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -84,6 +85,15 @@ public class GroupRequest {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+            }
+
+            @Override
+            protected void handleFailureMessage(Throwable throwable, String s) {
+                super.handleFailureMessage(throwable, s);
+                JSONObject obj = new JSONObject();
+                Response response1 = new Response("1", "网络连接失败");
+                response.loadGroupNames(response1);
+
             }
 
             @Override
