@@ -102,6 +102,9 @@ public class HotRequest {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            JSONObject obj = new JSONObject();
+            Response response1 = new Response("1", e.getLocalizedMessage());
+            response.loadHotData(response1);
         }
     }
 
