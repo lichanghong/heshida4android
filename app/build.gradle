@@ -34,4 +34,5 @@ dependencies {
     compile files('libs/domob_android_sdk.jar')
     compile files('libs/locSDK_6.13.jar')
     compile files('libs/android-async-http-1.4.3.jar')
+    compile files('libs/YoumiSdk_v5.3.3_2015-10-10.jar')
 }

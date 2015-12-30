@@ -14,6 +14,14 @@
 
     </RelativeLayout>
 
+    <!-- youmi-->
+    <LinearLayout
+        android:id="@+id/adLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+    </LinearLayout>
 
    <!--<Button-->
        <!--android:layout_width="fill_parent"-->

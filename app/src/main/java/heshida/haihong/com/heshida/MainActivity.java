@@ -13,6 +13,8 @@ import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import cn.domob.android.ads.AdManager;
+import heshida.haihong.com.heshida.AD.YouMiADManager;
 import heshida.haihong.com.heshida.Register.LoginActivity;
 import heshida.haihong.com.heshida.home.MyHomeActivity;
 
@@ -28,7 +30,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_main);
 
         fragmentManager = getFragmentManager();
