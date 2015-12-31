@@ -16,7 +16,7 @@ import heshida.haihong.com.heshida.More.TabMoreFragmentTab;
 public class FragmentFactory {
 
     public static Fragment getInstanceByIndexOfChild(int index) {
-        Fragment fragment = null;
+         Fragment fragment = null;
         index = index<=0?1:index+1;
         switch (index) {
             case 1:

@@ -25,7 +25,13 @@ public class HotManager {
     public static void saveHotData(Context context,HashMap<String,String> params,HotResponse response)
     {
         hotRequest.context = context;
-        hotRequest.saveHotData(response,params);
+        hotRequest.saveHotData(response, params);
+    }
+
+    public static void reportFakeMessage(Context context,HashMap<String,String> params,HotResponse response)
+    {
+        hotRequest.context = context;
+        hotRequest.reportFakeMessage(response,params);
     }
 
 }

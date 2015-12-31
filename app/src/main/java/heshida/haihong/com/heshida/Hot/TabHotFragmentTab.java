@@ -63,7 +63,7 @@ public class TabHotFragmentTab extends Fragment {
         mHotListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                HotModel hotModel = mHotModels.get(position);
+                final HotModel hotModel = mHotModels.get(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("失物详细信息")
                         .setIcon(android.R.drawable.ic_dialog_info)
@@ -74,7 +74,28 @@ public class TabHotFragmentTab extends Fragment {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
                             }
+                        })
+                .setNegativeButton("举报虚假信息", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, int which) {
+                        HashMap<String,String>params = new HashMap<String, String>();
+                        params.put("lostid",hotModel.getLostid());
+                        HotManager.reportFakeMessage(_view.getContext(), params, new HotResponse(){
+                            @Override
+                            public void reportFakeMessage(Response response) {
+                                super.reportFakeMessage(response);
+                                if (response.getErrno().equals("0")) {
+                                    Toast.makeText(getActivity(),"举报成功", Toast.LENGTH_LONG).show();
+                                    mAdapter.notifyDataSetChanged();
+                                }
+                                else {
+                                    Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
+                                }
+                                dialog.cancel();
+                            }
                         });
+                    }
+                });
                 AlertDialog dialog = builder.create();
                 dialog.show();
             }

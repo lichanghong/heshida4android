@@ -27,6 +27,12 @@ public class HotRequest {
         loadHotData_(response, params);
     }
 
+    public void reportFakeMessage(HotResponse response,HashMap<String,String> params)
+    {
+        reportFakeMessage_(response, params);
+    }
+
+
 
     public void saveHotData(HotResponse response,HashMap<String,String> params ) {
         saveHotData_(response, params);
@@ -119,6 +125,46 @@ public class HotRequest {
         }
         Response response1 = new Response(errno, errmsg);
         response.saveHotData(response1);
+    }
+
+    private void reportFakeMessage_(final HotResponse response, HashMap<String,String> params)
+    {
+        String url = HttpUtil.reportFakeMessage(context)+HttpUtil.getUrl(params);
+        HttpUtil.get(url, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(JSONObject jsonObject) {
+                super.onSuccess(jsonObject);
+                reportFakeMessageResult(response, jsonObject);
+            }
+
+            @Override
+            protected void handleFailureMessage(Throwable throwable, String s) {
+                super.handleFailureMessage(throwable, s);
+                JSONObject obj = new JSONObject();
+                Response response1 = new Response("1", "网络连接失败");
+                response.reportFakeMessage(response1);
+
+            }
+
+            @Override
+            public void onFailure(Throwable throwable, JSONObject jsonObject) {
+                super.onFailure(throwable, jsonObject);
+                reportFakeMessageResult(response, jsonObject);
+            }
+        });
+    }
+
+    private void reportFakeMessageResult(final HotResponse response,JSONObject jsonObject)
+    {
+        String errno = "", errmsg = "";
+        try {
+            errmsg = jsonObject.getString("errmsg");
+            errno = jsonObject.getString("errno");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Response response1 = new Response(errno, errmsg);
+        response.reportFakeMessage(response1);
     }
 
 }

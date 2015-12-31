@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import net.youmi.android.AdManager;
 import net.youmi.android.banner.AdSize;

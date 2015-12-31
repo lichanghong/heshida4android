@@ -75,6 +75,11 @@ public class HttpUtil {
         return getHostname(context)+"/user/societydetail";
     }
 
+    public static String reportFakeMessage(Context context)
+    {
+        return getHostname(context)+"/user/lostfoundblock";
+    }
+
     public static String  getUrl(HashMap<String, String> params) {
          // 添加url参数
         StringBuilder stringBuilder = new StringBuilder();

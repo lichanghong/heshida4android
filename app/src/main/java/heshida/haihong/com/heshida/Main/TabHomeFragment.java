@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +22,6 @@ import heshida.haihong.com.heshida.AD.YouMiADManager;
 import heshida.haihong.com.heshida.R;
 import heshida.haihong.com.heshida.Utils.Location.LocationManager;
 
-
 /**
  * Created by admin on 13-11-23.
  */
@@ -32,13 +32,30 @@ public class TabHomeFragment extends Fragment {
     WebView _mWebView;
 
 
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        Log.i("lifetime---", "startActivity-----------------------");
+
+    }
+
+    @Override
+    public void onInflate(Context context, AttributeSet attrs, Bundle savedInstanceState) {
+        super.onInflate(context, attrs, savedInstanceState);
+        Log.i("lifetime---", "onInflate-----------------------");
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, null);
-        _view = view;
-        initView();
-        initData();
+        View view = null;
+      if (_view == null) {
+          view = inflater.inflate(R.layout.fragment_home, null);
+          _view = view;
+          initView();
+          initData();
+          Log.i("lifetime---", "oncreateview-----------------------");
+      }
         return view;
     }
 

@@ -7,6 +7,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -17,6 +18,13 @@ import cn.domob.android.ads.AdManager;
 import heshida.haihong.com.heshida.AD.YouMiADManager;
 import heshida.haihong.com.heshida.Register.LoginActivity;
 import heshida.haihong.com.heshida.home.MyHomeActivity;
+
+
+//1.1版本修改点：
+// 添加失物招领举报虚假信息功能
+// 添加上传寻找失物信息功能
+// 首页广告优化
+// 首页网页去掉，改为安卓视图
 
 
 public class MainActivity extends Activity {

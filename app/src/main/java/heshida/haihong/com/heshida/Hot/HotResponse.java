@@ -16,4 +16,9 @@ public class HotResponse {
     {
 
     }
+
+    public void reportFakeMessage(Response response)
+    {
+
+    }
 }

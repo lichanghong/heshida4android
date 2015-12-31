@@ -6,7 +6,7 @@
         jumboMode="false"
         revision="23.0.0"
         sha1="f838907012dc1818b8943976dc291d8860f8e859">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/YoumiSdk_v5.3.3_2015-10-10-4c0cc82e0f5e480129d2e8c780e2e432d3c0ab9a.jar" />
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/YoumiSdk_v5.3.3_2015-10-10-4c0cc82e0f5e480129d2e8c780e2e432d3c0ab9a.jar" />
     </item>
 
 </items>
