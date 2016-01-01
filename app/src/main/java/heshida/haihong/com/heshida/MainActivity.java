@@ -7,6 +7,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,14 +15,17 @@ import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import cn.domob.android.ads.AdManager;
-import heshida.haihong.com.heshida.AD.YouMiADManager;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.TimeZone;
+
 import heshida.haihong.com.heshida.Register.LoginActivity;
 import heshida.haihong.com.heshida.home.MyHomeActivity;
 
 
 //1.1版本修改点：
-// 添加失物招领举报虚假信息功能
+// 添加失物招领举报虚假信息功能 finish
 // 添加上传寻找失物信息功能
 // 首页广告优化
 // 首页网页去掉，改为安卓视图
@@ -32,6 +36,7 @@ public class MainActivity extends Activity {
     private FragmentManager fragmentManager;
     private RadioGroup radioGroup;
     private TopBar topbar1;
+    FragmentFactory fragmentFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +44,16 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-
         fragmentManager = getFragmentManager();
         radioGroup = (RadioGroup) findViewById(R.id.rg_tab);
         final RadioButton radioButton = (RadioButton) radioGroup.getChildAt(0);
         topbar1 = (TopBar) findViewById(R.id.topbar1);
-
+        fragmentFactory = new FragmentFactory();
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                Fragment fragment = FragmentFactory.getInstanceByIndexOfChild(radioGroup.indexOfChild(findViewById(checkedId)));
+                Fragment fragment = fragmentFactory.getInstanceByIndexOfChild(radioGroup.indexOfChild(findViewById(checkedId)));
                 transaction.replace(R.id.content, fragment);
                 transaction.commit();
                 //切换tab时更改topbar样式
@@ -123,7 +127,7 @@ public class MainActivity extends Activity {
         topbar1.setRightBackground(R.drawable.tab_mine_l);
 
         topbar1.getLeftButton().setEnabled(false);
-        topbar1.setLeftBackground(R.drawable.icon);
+        topbar1.setLeftBackground(R.mipmap.ic_launcher);
 
 //        topbar1.setOnTopbarLeftClickListener(new TopBar.TopbarLeftClickListener() {
 //            @Override

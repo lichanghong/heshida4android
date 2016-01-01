@@ -69,7 +69,7 @@ public class GroupRequest {
         model.setGroupname(obj.getString("groupname"));
         model.setDescription(obj.getString("description"));
 
-        Response response1 = new Response(errno, errmsg);
+        Response response1 = new Response(errno, errmsg,"");
         response1.setData(model);
         response.loadGroupDetail(response1);
     }
@@ -91,7 +91,7 @@ public class GroupRequest {
             protected void handleFailureMessage(Throwable throwable, String s) {
                 super.handleFailureMessage(throwable, s);
                 JSONObject obj = new JSONObject();
-                Response response1 = new Response("1", "网络连接失败");
+                Response response1 = new Response("1", "网络连接失败","");
                 response.loadGroupNames(response1);
 
             }
@@ -121,8 +121,7 @@ public class GroupRequest {
                 models.add(model);
             }
 
-            Response response1 = new Response(errno, errmsg);
-            response1.setData(models);
+            Response response1 = new Response(errno, errmsg,models);
             response.loadGroupNames(response1);
     }
 

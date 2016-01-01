@@ -8,6 +8,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.support.annotation.UiThread;
+import android.test.UiThreadTest;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,18 +46,23 @@ public class TabHotFragmentTab extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_hot, null);
-        _view = view;
-
-        initView();
-        initListener();
-        initData();
-        return view;
+        if (null != _view) {
+            ViewGroup parent = (ViewGroup) _view.getParent();
+            if (null != parent) {
+                parent.removeView(_view);
+            }
+        } else {
+            _view = inflater.inflate(R.layout.fragment_hot, null);
+            initView();
+            initListener();
+            initData();
+            Log.i("lifetime---", "oncreateview-------TabHotFragmentTab----------------");        }
+        return _view;
     }
 
     private void initData() {
         mHotList = new ArrayList<Map<String, String>>();
-        mAdapter = new SimpleAdapter(getActivity(), mHotList,
+        mAdapter = new SimpleAdapter(_view.getContext(), mHotList,
                 android.R.layout.simple_list_item_2, new String[] { "title",
                 "time" }, new int[] { android.R.id.text1,
                 android.R.id.text2 });
@@ -62,7 +70,7 @@ public class TabHotFragmentTab extends Fragment {
 
         mHotListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
                 final HotModel hotModel = mHotModels.get(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("失物详细信息")
@@ -77,7 +85,7 @@ public class TabHotFragmentTab extends Fragment {
                         })
                 .setNegativeButton("举报虚假信息", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(final DialogInterface dialog, int which) {
+                    public void onClick(final DialogInterface dialog, final int which) {
                         HashMap<String,String>params = new HashMap<String, String>();
                         params.put("lostid",hotModel.getLostid());
                         HotManager.reportFakeMessage(_view.getContext(), params, new HotResponse(){
@@ -85,11 +93,18 @@ public class TabHotFragmentTab extends Fragment {
                             public void reportFakeMessage(Response response) {
                                 super.reportFakeMessage(response);
                                 if (response.getErrno().equals("0")) {
-                                    Toast.makeText(getActivity(),"举报成功", Toast.LENGTH_LONG).show();
-                                    mAdapter.notifyDataSetChanged();
+                                    getActivity().runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Toast.makeText(_view.getContext(), "举报成功", Toast.LENGTH_LONG).show();
+                                            mHotList.remove(position);
+                                            mAdapter.notifyDataSetChanged();
+                                        }
+                                    });
+
                                 }
                                 else {
-                                    Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(_view.getContext(),"举报失败", Toast.LENGTH_LONG).show();
                                 }
                                 dialog.cancel();
                             }

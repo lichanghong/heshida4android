@@ -10,6 +10,7 @@ import android.os.HandlerThread;
 import android.support.annotation.MainThread;
 import android.support.annotation.UiThread;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,13 +45,17 @@ public class TabGroupFragmentTab extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_group, null);
-        _view = view;
-
-        initView();
-        initData();
-
-        return view;
+        if (null != _view) {
+            ViewGroup parent = (ViewGroup) _view.getParent();
+            if (null != parent) {
+                parent.removeView(_view);
+            }
+        } else {
+            _view = inflater.inflate(R.layout.fragment_group, null);
+            initView();
+            initData();
+            Log.i("lifetime---", "oncreateview-------TabGroupFragmentTab----------------");        }
+        return _view;
     }
 
     private void initData() {
@@ -82,7 +87,7 @@ public class TabGroupFragmentTab extends Fragment {
             @Override
             public void loadGroupNames(Response response) {
                 super.loadGroupNames(response);
-                if (response.getErrno().equals("0")) {
+                if (response.getErrno().toString().equals("0")) {
                     mGroupList = (List<GroupModel>) response.getData();
                     mAdapter.notifyDataSetChanged();
                 }

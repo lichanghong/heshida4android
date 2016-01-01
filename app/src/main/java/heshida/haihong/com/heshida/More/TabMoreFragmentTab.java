@@ -35,11 +35,17 @@ public class TabMoreFragmentTab extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_more, null);
-        _view = view;
+        if (null != _view) {
+            ViewGroup parent = (ViewGroup) _view.getParent();
+            if (null != parent) {
+                parent.removeView(_view);
+            }
+        } else {
+            _view = inflater.inflate(R.layout.fragment_more, null);
+            initView();
 
-        initView();
-        return view;
+            Log.i("lifetime---", "oncreateview-------TabMoreFragmentTab----------------");        }
+        return _view;
     }
 
     private void initView() {

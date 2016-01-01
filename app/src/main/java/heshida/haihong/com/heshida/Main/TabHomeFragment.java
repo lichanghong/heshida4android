@@ -1,79 +1,96 @@
 package heshida.haihong.com.heshida.Main;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import cn.domob.android.ads.AdEventListener;
 import cn.domob.android.ads.AdManager;
-import cn.domob.android.ads.AdView;
 import heshida.haihong.com.heshida.AD.ADManager;
-import heshida.haihong.com.heshida.AD.YouMiADManager;
+import heshida.haihong.com.heshida.AD.DuomengADController;
+import heshida.haihong.com.heshida.AD.YouMiADController;
 import heshida.haihong.com.heshida.R;
-import heshida.haihong.com.heshida.Utils.Location.LocationManager;
+import heshida.haihong.com.heshida.Utils.net.Response;
 
 /**
  * Created by admin on 13-11-23.
  */
 public class TabHomeFragment extends Fragment {
-
+    private static final String OpenDuoMengADCode  = "1451576100";
+    private static final String OpenYouMiADCode    = "1451576200";
+    boolean hasAD = false;
     View _view;
     //    LocationManager mLocationManager;
     WebView _mWebView;
 
-
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        Log.i("lifetime---", "startActivity-----------------------");
-
-    }
-
-    @Override
-    public void onInflate(Context context, AttributeSet attrs, Bundle savedInstanceState) {
-        super.onInflate(context, attrs, savedInstanceState);
-        Log.i("lifetime---", "onInflate-----------------------");
-
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = null;
-      if (_view == null) {
-          view = inflater.inflate(R.layout.fragment_home, null);
-          _view = view;
-          initView();
-          initData();
-          Log.i("lifetime---", "oncreateview-----------------------");
+        if (null != _view) {
+            ViewGroup parent = (ViewGroup) _view.getParent();
+            if (null != parent) {
+                parent.removeView(_view);
+            }
+        } else {
+            _view = inflater.inflate(R.layout.fragment_home, null);
+            initView();
+            if (!hasAD)
+            {
+                initData();
+            }
+        }
+        return _view;
       }
-        return view;
-    }
 
     @Override
     public void onStart() {
         super.onStart();
-        //webview
-        _mWebView.getSettings().setJavaScriptEnabled(true);
-        _mWebView.loadUrl("http://www.henannu.edu.cn/");
+        if (!hasAD)
+        {
+            initData();
+            //webview
+            _mWebView.getSettings().setJavaScriptEnabled(true);
+            _mWebView.loadUrl("http://www.henannu.edu.cn/");
+        }
     }
 
     private void initData() {
-        //多盟广告
-        ADManager adManager = new ADManager(getActivity());
-        adManager.showADView(_view);
-        //有米广告
-        YouMiADManager youMiADManager = new YouMiADManager(getActivity());
-        youMiADManager.showYOUMIAdView(_view);
+        MainManager.loadMainData(_view.getContext(),new MainResponse(){
+            @Override
+            public void loadMainData(Response response) {
+                super.loadMainData(response);
+                if (response.getErrno().equals("0")) {
+                    ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
+                    String responseTime = response.getTime().toString();
+                    String adTime       = OpenYouMiADCode.toString();
+                    if (responseTime.equals(adTime))
+                    {
+                        adManager.showYouMiAD(_view);
+                        hasAD = true;
+                    }
+                    else if (response.getTime().toString().equals(OpenDuoMengADCode.toString()))
+                    {
+                        adManager.showDuoMengAD(_view);
+                        hasAD = true;
+                    }
+                    else  hasAD = false;
+                } else {
+                    Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+
+//         //多盟广告
+//        DuomengADController duomengAdController = new DuomengADController(getActivity());
+//        duomengAdController.showADView(_view);
+//        //有米广告
+//        YouMiADController youMiADController = new YouMiADController(getActivity());
+//        youMiADController.showYOUMIAdView(_view);
 
 
         //定位

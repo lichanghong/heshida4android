@@ -6,11 +6,15 @@ package heshida.haihong.com.heshida.Utils.net;
 public class Response {
     private String errno;
     private String errmsg;
+    private String time;
     private Object data;
 
-    public Response(String errno, String errmsg) {
+
+    public Response(String errno, String errmsg, Object data) {
         this.errno = errno;
         this.errmsg = errmsg;
+        this.time = String.valueOf(System.currentTimeMillis()/1000L);
+        this.data = data;
     }
 
     public String getErrno() {
@@ -29,6 +33,14 @@ public class Response {
         this.errmsg = errmsg;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     public Object getData() {
         return data;
     }
@@ -42,6 +54,7 @@ public class Response {
         return "Response{" +
                 "errno='" + errno + '\'' +
                 ", errmsg='" + errmsg + '\'' +
+                ", time='" + time + '\'' +
                 ", data=" + data +
                 '}';
     }

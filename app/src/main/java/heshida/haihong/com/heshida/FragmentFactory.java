@@ -14,25 +14,36 @@ import heshida.haihong.com.heshida.More.TabMoreFragmentTab;
  * Created by admin on 13-11-23.
  */
 public class FragmentFactory {
+    TabHomeFragment homeFragment;
+    TabGroupFragmentTab groupFragmentTab;
+    TabHotFragmentTab hotFragmentTab;
+    TabMoreFragmentTab moreFragmentTab;
 
-    public static Fragment getInstanceByIndexOfChild(int index) {
+    public FragmentFactory() {
+        homeFragment     = new TabHomeFragment();
+        groupFragmentTab = new TabGroupFragmentTab();
+        hotFragmentTab   = new TabHotFragmentTab();
+        moreFragmentTab  = new TabMoreFragmentTab();
+    }
+
+    public Fragment getInstanceByIndexOfChild(int index) {
          Fragment fragment = null;
         index = index<=0?1:index+1;
         switch (index) {
             case 1:
-                fragment = new TabHomeFragment();
+                fragment = homeFragment;
                 break;
             case 2:
-                fragment = new TabGroupFragmentTab();
+                fragment = groupFragmentTab;
                 break;
             case 3:
-                fragment = new TabHotFragmentTab();
+                fragment = hotFragmentTab;
                 break;
             case 4:
-                fragment = new TabMoreFragmentTab();
+                fragment = moreFragmentTab;
                 break;
             case 5:
-                fragment = new TabGlobalFragmentTab();
+//                fragment = new TabGlobalFragmentTab();
                 break;
         }
         return fragment;

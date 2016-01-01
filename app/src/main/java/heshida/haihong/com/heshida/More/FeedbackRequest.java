@@ -52,7 +52,7 @@ public class FeedbackRequest {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Response response1 = new Response(errno, errmsg);
+        Response response1 = new Response(errno, errmsg,"");
         response.feedBack(response1);
     }
 
