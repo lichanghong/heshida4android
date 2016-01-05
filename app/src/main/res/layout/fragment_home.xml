@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
+    <!--多盟-->
     <RelativeLayout
-        android:id="@+id/adcontainer"
+        android:id="@+id/duomengadcontainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -14,28 +14,84 @@
 
     </RelativeLayout>
 
-    <!-- youmi-->
+    <!-- 有米-->
     <LinearLayout
-        android:id="@+id/adLayout"
+        android:id="@+id/youmiadLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
     </LinearLayout>
+    <!--万普-->
+    <LinearLayout
+        android:id="@+id/wanpuAdLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"/>
 
-   <!--<Button-->
-       <!--android:layout_width="fill_parent"-->
-       <!--android:layout_height="wrap_content"-->
-       <!--android:text="天气预报"-->
-       <!--android:height="70dp"-->
-      <!--/>-->
-    <!--<include layout="@layout/schedule_layout"></include>-->
-    <WebView
-        android:id="@+id/home_webView"
+    <!--百度-->
+    <RelativeLayout
+        android:id="@+id/appx_banner_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+    </RelativeLayout>
 
-    </WebView>
+    <LinearLayout
+        android:id="@+id/miniAdLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+    <!--<include layout="@layout/schedule_layout"></include>-->
+    <!--<WebView-->
+        <!--android:id="@+id/home_webView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</WebView>-->
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="2000dp">
+
+           <HorizontalScrollView
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:scrollbars="horizontal"
+               android:layout_gravity="center_vertical"
+               >
+                <LinearLayout
+                    android:id="@+id/homegallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                </LinearLayout>
+           </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/darker_gray"></View>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/holo_green_dark"></View>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/holo_red_dark"></View>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

@@ -9,7 +9,6 @@ public class Response {
     private String time;
     private Object data;
 
-
     public Response(String errno, String errmsg, Object data) {
         this.errno = errno;
         this.errmsg = errmsg;

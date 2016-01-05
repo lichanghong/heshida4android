@@ -66,7 +66,7 @@ public class FoundActivity extends Activity {
                         public void saveHotData(Response response) {
                             super.saveHotData(response);
                             if (response.getErrno().equals("0")) {
-                                Toast.makeText(FoundActivity.this, "上传成功,失主会非常赶紧您的~", Toast.LENGTH_LONG).show();
+                                Toast.makeText(FoundActivity.this, "上传成功,失主会非常感激您的~", Toast.LENGTH_LONG).show();
                                 proDialog.dismiss();
                                 finish();
                             } else {

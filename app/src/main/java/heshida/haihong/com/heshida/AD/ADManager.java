@@ -11,7 +11,9 @@ public class ADManager {
     Context mContext;
     Activity mActivity;
     DuomengADController duomengADController;
-    YouMiADController     youMiADController;
+    YouMiADController   youMiADController;
+    BaiduADController   baiduADController;
+    WAPSADController    wapsadController;
 
     public ADManager(Context mContext,Activity mActivity) {
         this.mContext = mContext;
@@ -24,6 +26,8 @@ public class ADManager {
             sSingleton = new ADManager(context,mActivity);
             sSingleton.duomengADController = new DuomengADController(mActivity);    //实例话对象
             sSingleton.youMiADController   = new YouMiADController(mActivity);
+            sSingleton.baiduADController   = new BaiduADController(mActivity);
+            sSingleton.wapsadController    = new WAPSADController(mActivity);
         }
         return sSingleton;
     }
@@ -38,5 +42,13 @@ public class ADManager {
         youMiADController.showYOUMIAdView(mView);
     }
 
+    public void showBaiduAD(View mView)
+    {
+        baiduADController.showBaiduAD(mView);
+    }
+    public void showWAPSAD(View mView)
+    {
+        wapsadController.showADView(mView);
+    }
 
 }

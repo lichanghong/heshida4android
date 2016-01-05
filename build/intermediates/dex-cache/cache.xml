@@ -2,11 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/YoumiSdk_v5.3.3_2015-10-10.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_cuid.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="f838907012dc1818b8943976dc291d8860f8e859">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/YoumiSdk_v5.3.3_2015-10-10-4c0cc82e0f5e480129d2e8c780e2e432d3c0ab9a.jar" />
+        sha1="58de9ecfba229dbb2c3eb3f45dbe284ba58100ea">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_cuid-3caafa361f39bfbb69cf976dca6c61778289899b.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_appx_android_2.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="fdf78377a8b54f9dd855a3d3374c7e99741935ee">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_appx_android_2.0.0-5b545d7d05722ff21274f721863ba5c35872573b.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5-4e529656b52ac3d2bb51777a4a4de26d00c5c34b.jar" />
     </item>
 
 </items>

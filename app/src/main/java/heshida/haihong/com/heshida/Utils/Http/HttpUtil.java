@@ -20,7 +20,7 @@ public class HttpUtil {
     private static AsyncHttpClient client =new AsyncHttpClient();    //实例话对象
     static
     {
-        client.setTimeout(10000);   //设置链接超时，如果不设置，默认为10s
+        client.setTimeout(5000);   //设置链接超时，如果不设置，默认为10s
     }
     public static void get(String urlString,AsyncHttpResponseHandler res)    //用一个完整url获取一个string对象
     {

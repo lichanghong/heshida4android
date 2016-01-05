@@ -5,15 +5,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import net.youmi.android.AdManager;
-import net.youmi.android.banner.AdSize;
-import net.youmi.android.banner.AdView;
-import net.youmi.android.banner.AdViewListener;
 
+import adh.doi.jkd.AdManager;
+import adh.doi.jkd.br.AdSize;
+import adh.doi.jkd.br.AdView;
+import adh.doi.jkd.br.AdViewListener;
 import heshida.haihong.com.heshida.R;
 
 /**
  * Created by lichanghong on 12/30/15.
+ * 有米
  */
 public class YouMiADController {
     Activity mActivity;
@@ -26,7 +27,7 @@ public class YouMiADController {
     public YouMiADController(Activity mActivity) {
         this.mActivity = mActivity;
         //请务必在应用第一个 Activity（启动的第一个类）的 onCreate 中调用以下代码  youmi
-        AdManager.getInstance(mActivity.getApplicationContext()).init(youmiPUBLISHER_ID, youmiINLINE_PPID, true);
+        AdManager.getInstance(mActivity.getApplicationContext()).init(youmiPUBLISHER_ID, youmiINLINE_PPID, false);
     }
 
     public void showYOUMIAdView(View view)
@@ -35,7 +36,7 @@ public class YouMiADController {
         AdView adView = new AdView(view.getContext(), AdSize.FIT_SCREEN);
 
 // 获取要嵌入广告条的布局
-        madLayout =(LinearLayout)view.findViewById(R.id.adLayout);
+        madLayout =(LinearLayout)view.findViewById(R.id.youmiadLayout);
 
 // 将广告条加入到布局中
         madLayout.addView(adView);

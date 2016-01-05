@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import net.youmi.android.banner.AdSize;
-
 import cn.domob.android.ads.AdEventListener;
 import cn.domob.android.ads.AdManager;
 import cn.domob.android.ads.AdView;
@@ -16,6 +14,7 @@ import heshida.haihong.com.heshida.R;
 
 /**
  * Created by lichanghong on 12/30/15.
+ * 多盟
  */
 public class DuomengADController {
     Activity mActivity;
@@ -23,21 +22,17 @@ public class DuomengADController {
     AdView mAdView;
 
     //多盟
-    public  static  final String PUBLISHER_ID = "56OJ25K4uN38i7A79L";
-    public  static  final String INLINE_PPID  = "16TLPlylApn4PNUv2cu8brIs";
+    public  static  final String PUBLISHER_ID = "7568168";
+    public  static  final String INLINE_PPID  = "5RPajD8dGexLfHH89T6DqjOtNrhgjbYq";
 
     public DuomengADController(Activity mActivity) {
-        this.mActivity = mActivity;
-    }
-
-    public void setmActivity(Activity mActivity) {
         this.mActivity = mActivity;
     }
 
     public void showADView(View view) {
         final Activity mainActivity = mActivity;
 
-        _AdContainer =(RelativeLayout) view.findViewById(R.id.adcontainer);
+        _AdContainer =(RelativeLayout) view.findViewById(R.id.duomengadcontainer);
         mAdView = new AdView(mainActivity, PUBLISHER_ID, INLINE_PPID);
         mAdView.setKeyword("game");
         mAdView.setAdSize(AdView.INLINE_SIZE_FLEXIBLE);

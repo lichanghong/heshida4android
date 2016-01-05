@@ -29,6 +29,7 @@ import heshida.haihong.com.heshida.home.MyHomeActivity;
 // 添加上传寻找失物信息功能
 // 首页广告优化
 // 首页网页去掉，改为安卓视图
+// 添加下拉刷新
 
 
 public class MainActivity extends Activity {
