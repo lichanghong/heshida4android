@@ -128,15 +128,15 @@
                     android:layout_weight="1"
                     >
                 </Button>
-                <Button
-                    android:textColor="#0066ff"
-                    android:background="@android:color/transparent"
-                    android:layout_height="match_parent"
-                    android:text="点评校园"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    >
-                </Button>
+                <!--<Button-->
+                    <!--android:textColor="#0066ff"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="点评校园"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!-->-->
+                <!--</Button>-->
 
             </LinearLayout>
         </LinearLayout>

@@ -14,6 +14,7 @@
     </RelativeLayout>
 
 
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_marginLeft="6dp"
@@ -38,14 +39,21 @@
             android:text="我捡东西了"
             />
     </LinearLayout>
-    <ListView
-        android:id="@+id/hotListView"
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/hot_swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="#ccc"
-        android:dividerHeight="1dp"
-        >
-    </ListView>
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/hotListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ccc"
+            android:dividerHeight="1dp"
+            >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 
 
 </LinearLayout><!-- From: file:/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/res/layout/fragment_hot.xml -->

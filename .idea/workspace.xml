@@ -9,7 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3ee641e-2bc6-499a-8b81-35e75b9afb85" name="Default" comment="" />
+    <list default="true" id="8432b049-58a4-4f06-9da8-79e4de507854" name="Default" comment="" />
     <ignored path="heshida4android.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +28,94 @@
     <favorites_list name="heshida4android" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="TabGroupFragmentTab.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Groups/TabGroupFragmentTab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.037037">
+              <caret line="130" column="48" selection-start-line="102" selection-start-column="6" selection-end-line="130" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_group.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_group.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.344828">
+              <caret line="20" column="51" selection-start-line="6" selection-start-column="3" selection-end-line="20" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_hot.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hot.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.965517">
+              <caret line="43" column="42" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TabHotFragmentTab.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/TabHotFragmentTab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15951973">
+              <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
+              <folding>
+                <element signature="e#1999#2000#0" expanded="true" />
+                <element signature="e#2030#2031#0" expanded="true" />
+                <element signature="e#2349#3558#0" expanded="true" />
+                <element signature="e#3557#3558#0" expanded="true" />
+                <element signature="e#3984#6813#0" expanded="true" />
+                <element signature="e#4644#4912#0" expanded="true" />
+                <element signature="e#4911#4912#0" expanded="true" />
+                <element signature="e#4967#6701#0" expanded="true" />
+                <element signature="e#5218#5234#0" expanded="true" />
+                <element signature="e#5403#6643#0" expanded="true" />
+                <element signature="e#5782#6306#0" expanded="true" />
+                <element signature="e#6305#6306#0" expanded="true" />
+                <element signature="e#6642#6643#0" expanded="true" />
+                <element signature="e#6700#6701#0" expanded="true" />
+                <element signature="e#6812#6813#0" expanded="true" />
+                <element signature="e#6917#7152#0" expanded="true" />
+                <element signature="e#7151#7152#0" expanded="true" />
+                <element signature="e#7795#7952#0" expanded="true" />
+                <element signature="e#7951#7952#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HotManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HotRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1497,12 +1584,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index_gallery_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Main/TabHomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_school_web.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/LostAndFound/FoundActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Main/SchoolWebActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_hot.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/TabHotFragmentTab.java" />
       </list>
     </option>
   </component>
@@ -1510,29 +1593,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="95" />
-    <option name="y" value="174" />
+    <option name="x" value="191" />
+    <option name="y" value="26" />
     <option name="width" value="1276" />
     <option name="height" value="777" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>AndroidDomInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1607,24 +1671,6 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="heshida4android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
@@ -1665,7 +1711,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
+              <option name="myItemId" value="Hot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1687,29 +1733,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LostAndFound" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="heshida4android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="heshida" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AD" />
+              <option name="myItemId" value="Groups" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1725,8 +1749,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
@@ -1750,14 +1774,8 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5556" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="4_API_17" />
-  </component>
-  <component name="RecentsManager">
-    <key name="android.template.packageName">
-      <recent name="heshida.haihong.com.heshida.Main" />
-    </key>
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
-    </key>
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1946,41 +1964,38 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c3ee641e-2bc6-499a-8b81-35e75b9afb85" name="Default" comment="" />
-      <created>1452092376275</created>
+      <changelist id="8432b049-58a4-4f06-9da8-79e4de507854" name="Default" comment="" />
+      <created>1452180704438</created>
       <option name="number" value="Default" />
-      <updated>1452092376275</updated>
+      <updated>1452180704438</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="95" y="174" width="1276" height="777" extended-state="0" />
-    <editor active="false" />
+    <frame x="191" y="26" width="1276" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33282906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939487" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2980333" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.075642966" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1991,88 +2006,40 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotRequest.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotRequest.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotRequest.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/view/Display.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Groups/TabGroupFragmentTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11566265">
-          <caret line="475" column="16" selection-start-line="475" selection-start-column="16" selection-end-line="475" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/view/ViewGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325301">
-          <caret line="6814" column="19" selection-start-line="6814" selection-start-column="19" selection-end-line="6814" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index_gallery_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15544042">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/widget/TextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33207548">
-          <caret line="2842" column="17" selection-start-line="2842" selection-start-column="17" selection-end-line="2842" selection-end-column="17" />
-          <folding>
-            <element signature="e#109075#109076#0" expanded="false" />
-            <element signature="e#109122#109123#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38867924">
-          <caret line="2084" column="29" selection-start-line="2084" selection-start-column="8" selection-end-line="2084" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Main/MainModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33187774">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="23" />
-          <folding>
-            <element signature="e#958#959#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_group_detail.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.32743362">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state vertical-scroll-proportion="-18.037037">
+          <caret line="130" column="48" selection-start-line="102" selection-start-column="6" selection-end-line="130" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -2082,131 +2049,80 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57522124">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state vertical-scroll-proportion="-10.344828">
+          <caret line="20" column="51" selection-start-line="6" selection-start-column="3" selection-end-line="20" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hot.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6637168">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state vertical-scroll-proportion="-9.965517">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25685784">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="8846" column="0" selection-start-line="8846" selection-start-column="0" selection-end-line="8846" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_found.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70866144">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/LostAndFound/FoundActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40677965">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Main/SchoolWebActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/HotRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1696113">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Hot/TabHotFragmentTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15951973">
+          <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
           <folding>
-            <element signature="e#1205#1458#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1999#2000#0" expanded="true" />
+            <element signature="e#2030#2031#0" expanded="true" />
+            <element signature="e#2349#3558#0" expanded="true" />
+            <element signature="e#3557#3558#0" expanded="true" />
+            <element signature="e#3984#6813#0" expanded="true" />
+            <element signature="e#4644#4912#0" expanded="true" />
+            <element signature="e#4911#4912#0" expanded="true" />
+            <element signature="e#4967#6701#0" expanded="true" />
+            <element signature="e#5218#5234#0" expanded="true" />
+            <element signature="e#5403#6643#0" expanded="true" />
+            <element signature="e#5782#6306#0" expanded="true" />
+            <element signature="e#6305#6306#0" expanded="true" />
+            <element signature="e#6642#6643#0" expanded="true" />
+            <element signature="e#6700#6701#0" expanded="true" />
+            <element signature="e#6812#6813#0" expanded="true" />
+            <element signature="e#6917#7152#0" expanded="true" />
+            <element signature="e#7151#7152#0" expanded="true" />
+            <element signature="e#7795#7952#0" expanded="true" />
+            <element signature="e#7951#7952#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_school_web.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41338584">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26289925">
-          <caret line="129" column="24" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/Main/TabHomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6766055">
-          <caret line="106" column="44" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/AD/YouMiADController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41284403">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/AD/ADManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24082568">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/AD/BaiduADController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24082568">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/AD/DuomengADController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27522936">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/heshida/haihong/com/heshida/AD/WAPSADController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325688">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
