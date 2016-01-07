@@ -1,0 +1,30 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <heshida.haihong.com.heshida.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topbarWebSchool"
+        tools:background="#ffffff"
+        custom:buttonMode="left"
+        custom:leftBackground="#888888"
+        custom:leftHeight="40dp"
+        custom:rightHeight="35dp"
+        custom:leftMargin="12dp"
+        custom:leftWidth="40dp"
+        custom:title="Title1"
+        custom:titleTextColor="@android:color/black"
+        custom:titleTextSize="16sp"
+        >
+    </heshida.haihong.com.heshida.TopBar>
+
+    <WebView
+        android:id="@+id/schoolWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

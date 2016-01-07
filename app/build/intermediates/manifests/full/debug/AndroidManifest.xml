@@ -24,6 +24,9 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
+    <!-- 内存写入权限，图片缓存需要 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <!-- 以下为可选权限 -->
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -53,15 +56,15 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="IuXeHlEsBav5pCTl9ETezIM3" />
-        <meta-data
-            android:name="BDAPPID"
-            android:value="7568168" />
-        <meta-data
-            android:name="BDAPPKEY"
-            android:value="5RPajD8dGexLfHH89T6DqjOtNrhgjbYq" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="IuXeHlEsBav5pCTl9ETezIM3" /> -->
+
+
+        <!-- <meta-data android:name="BDAPPID" android:value="7568168"/> -->
+        <!-- <meta-data android:name="BDAPPKEY" android:value="5RPajD8dGexLfHH89T6DqjOtNrhgjbYq"/> -->
+
 
         <!-- ↓↓↓ 百度广告联盟SDK ↓↓↓ -->
         <activity android:name="com.baidu.appx.ui.BDInnerBrowser" />
@@ -79,24 +82,28 @@
             </intent-filter>
         </receiver> <!-- ↑↑↑ 百度广告联盟SDK ↑↑↑ -->
 
+
+        <!-- ↑↑↑ 有米  ↑↑↑ -->
         <activity
-            android:name="net.youmi.android.AdBrowser"
+            android:name="kll.dod.rtk.OO"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
 
         <service
-            android:name="net.youmi.android.AdService"
+            android:name="kll.dod.rtk.BB"
             android:exported="false" >
         </service>
 
-        <receiver android:name="net.youmi.android.AdReceiver" >
+        <receiver android:name="kll.dod.rtk.GG" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
 
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
+        <!-- ↑↑↑ 有米  ↑↑↑ -->
+
 
         <!-- <service -->
         <!-- android:name="com.baidu.location.f" -->
@@ -140,6 +147,10 @@
         <activity
             android:name="heshida.haihong.com.heshida.LostAndFound.FoundActivity"
             android:label="@string/title_activity_found" >
+        </activity>
+        <activity
+            android:name="heshida.haihong.com.heshida.Main.SchoolWebActivity"
+            android:label="@string/title_activity_school_web" >
         </activity>
     </application>
 

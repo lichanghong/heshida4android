@@ -20,4 +20,5 @@
     <string name="getlostfound">/user/getlostfound</string>
 
     <string name="title_activity_found">FoundActivity</string>
+    <string name="title_activity_school_web">SchoolWebActivity</string>
 </resources>

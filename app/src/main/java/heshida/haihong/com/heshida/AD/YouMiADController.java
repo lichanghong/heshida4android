@@ -1,16 +1,17 @@
 package heshida.haihong.com.heshida.AD;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
-
-import adh.doi.jkd.AdManager;
-import adh.doi.jkd.br.AdSize;
-import adh.doi.jkd.br.AdView;
-import adh.doi.jkd.br.AdViewListener;
 import heshida.haihong.com.heshida.R;
+import kll.dod.rtk.AdManager;
+import kll.dod.rtk.br.AdSize;
+import kll.dod.rtk.br.AdView;
+import kll.dod.rtk.br.AdViewListener;
+
 
 /**
  * Created by lichanghong on 12/30/15.
@@ -33,35 +34,32 @@ public class YouMiADController {
     public void showYOUMIAdView(View view)
     {
         // 实例化广告条
-        AdView adView = new AdView(view.getContext(), AdSize.FIT_SCREEN);
+        AdView adView = new AdView(mActivity,AdSize.FIT_SCREEN);
 
 // 获取要嵌入广告条的布局
-        madLayout =(LinearLayout)view.findViewById(R.id.youmiadLayout);
+        LinearLayout adLayout=(LinearLayout)view.findViewById(R.id.youmiadLayout);
 
 // 将广告条加入到布局中
-        madLayout.addView(adView);
-
+        adLayout.addView(adView);
         adView.setAdListener(new AdViewListener() {
 
             @Override
             public void onSwitchedAd(AdView adView) {
-                // 切换广告并展示
-                Log.i("youmi", "onSwitchedAd");
-
+                // 切换广告并展示\
+                Log.e("youmiad","onSwitchedAd");
             }
 
             @Override
             public void onReceivedAd(AdView adView) {
                 // 请求广告成功
-                Log.i("youmi", "onReceivedAd");
+                Log.e("youmiad","onReceivedAd");
 
             }
 
             @Override
             public void onFailedToReceivedAd(AdView adView) {
                 // 请求广告失败
-                Log.i("youmi", "onFailedToReceivedAd");
-
+                Log.e("youmiad","onFailedToReceivedAd");
             }
         });
     }
