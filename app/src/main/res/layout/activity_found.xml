@@ -54,7 +54,7 @@
         <EditText
             android:id="@+id/found_line"
             android:layout_marginTop="2dp"
-            android:hint="好心人联系方式"
+            android:hint="我的联系方式"
             android:singleLine="true"
             android:textSize="12dp"
             android:maxLength="30"

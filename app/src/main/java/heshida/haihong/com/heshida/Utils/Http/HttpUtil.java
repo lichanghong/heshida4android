@@ -63,7 +63,9 @@ public class HttpUtil {
     }
     public static String getHotDataURL(Context context)
     {
-        return getHostname(context)+context.getString(R.string.getlostfound);
+        return  "http://heshidatest.applinzi.com"+"/admin.php/getlostfound";
+
+//        return getHostname(context)+context.getString(R.string.getlostfound);
     }
     public static String loadGroupNames(Context context)
     {

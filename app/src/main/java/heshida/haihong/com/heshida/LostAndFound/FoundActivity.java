@@ -2,6 +2,7 @@ package heshida.haihong.com.heshida.LostAndFound;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,6 +26,7 @@ public class FoundActivity extends Activity {
     TopBar mTopBar;
     EditText mFoundDetail,mFoundTime,mFoundLocation,mFoundLine;
     Button mFoundBtn;
+    Boolean losted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class FoundActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_found);
+        Intent intent = getIntent();
+        losted = intent.getExtras().getBoolean("losted");
         initView();
         initData();
         initListener();
@@ -60,6 +64,7 @@ public class FoundActivity extends Activity {
                     params.put("foundtime",time);
                     params.put("location",location);
                     params.put("line", line);
+                    params.put("losted",losted+"");
                     final ProgressDialog proDialog = android.app.ProgressDialog.show(FoundActivity.this, "失主会非常赶紧您的~", "上传中...");
                     HotManager.saveHotData(FoundActivity.this, params, new HotResponse() {
                         @Override
@@ -69,9 +74,12 @@ public class FoundActivity extends Activity {
                                 Toast.makeText(FoundActivity.this, "上传成功,失主会非常感激您的~", Toast.LENGTH_LONG).show();
                                 proDialog.dismiss();
                                 finish();
+                                overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
+
                             } else {
                                 Toast.makeText(FoundActivity.this, response.getErrmsg(), Toast.LENGTH_LONG).show();
                             }
+                            proDialog.cancel();
 
                         }
                     });
@@ -92,7 +100,7 @@ public class FoundActivity extends Activity {
             @Override
             public void leftClick() {
                 finish();
-                overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
 
@@ -101,6 +109,11 @@ public class FoundActivity extends Activity {
         mFoundLocation = (EditText) findViewById(R.id.found_location);
         mFoundLine = (EditText) findViewById(R.id.found_line);
         mFoundBtn  = (Button) findViewById(R.id.found_BtnOK);
+        if (losted)
+        {
+            mFoundTime.setHint("丢失物品大致时间");
+            mFoundLocation.setHint("丢失物品大致地点地点");
+        }
 
     }
 

@@ -65,7 +65,6 @@ public class HotRequest {
             @Override
             protected void handleFailureMessage(Throwable throwable, String s) {
                 super.handleFailureMessage(throwable, s);
-                JSONObject obj = new JSONObject();
                 Response response1 = new Response("1", "网络连接失败","");
                 response.loadHotData(response1);
 
@@ -95,6 +94,7 @@ public class HotRequest {
                 model.setFoundtime(obj.getString("foundtime"));
                 model.setLocation(obj.getString("location"));
                 model.setLine(obj.getString("line"));
+                model.setLosted(obj.getString("losted"));
                 if (model.getBlocked().equals("0")) {
                     models.add(model);
                 }
@@ -105,7 +105,6 @@ public class HotRequest {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            JSONObject obj = new JSONObject();
             Response response1 = new Response("1", e.getLocalizedMessage(),"");
             response.loadHotData(response1);
         }

@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -41,12 +42,13 @@ import heshida.haihong.com.heshida.Utils.net.Response;
 public class TabHotFragmentTab extends Fragment {
     private View _view;
     private SwipeRefreshLayout mSwipeLayout;
-    Button mFoundButton;
+    Button mFoundButton; //发布捡到的东西
+    Button mLostButton;  //寻找我丢失的东西
     ListView mHotListView;
-    private SimpleAdapter mAdapter;
+    private HotLostAdapter mHotLostAdapter;
     List<Map<String, String>> mHotList;
     List<HotModel>mHotModels;
-
+    ImageView mBg_lost_item;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (null != _view) {
@@ -94,10 +96,11 @@ public class TabHotFragmentTab extends Fragment {
                         Map<String, String> keyValuePair = new HashMap<String, String>();
                         keyValuePair.put("title", mHotModels.get(i).getTitle());
                         keyValuePair.put("time", mHotModels.get(i).getFoundtime());
+                        keyValuePair.put("losted", mHotModels.get(i).getLosted());
                         mHotList.add(keyValuePair);
                     }
                         mSwipeLayout.setRefreshing(false);
-                        mAdapter.notifyDataSetChanged();
+                        mHotLostAdapter.notifyDataSetChanged();
 
                 } else {
                     Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
@@ -109,11 +112,8 @@ public class TabHotFragmentTab extends Fragment {
 
     private void initData() {
         mHotList = new ArrayList<Map<String, String>>();
-        mAdapter = new SimpleAdapter(_view.getContext(), mHotList,
-                android.R.layout.simple_list_item_2, new String[] { "title",
-                "time" }, new int[] { android.R.id.text1,
-                android.R.id.text2 });
-        mHotListView.setAdapter(mAdapter);
+        mHotLostAdapter =  new HotLostAdapter(mHotList,_view.getContext());
+        mHotListView.setAdapter(mHotLostAdapter);
 
         mHotListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -145,7 +145,7 @@ public class TabHotFragmentTab extends Fragment {
                                                 public void run() {
                                                     Toast.makeText(_view.getContext(), "举报成功", Toast.LENGTH_LONG).show();
                                                     mHotList.remove(position);
-                                                    mAdapter.notifyDataSetChanged();
+                                                    mHotLostAdapter.notifyDataSetChanged();
                                                 }
                                             });
 
@@ -170,15 +170,31 @@ public class TabHotFragmentTab extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), FoundActivity.class);
+                intent.putExtra("losted",false);
                 startActivity(intent);
+                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+            }
+        });
+        mLostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FoundActivity.class);
+                intent.putExtra("losted", true);
+                startActivity(intent);
+                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
             }
         });
     }
 
     private void initView() {
         mFoundButton  = (Button) _view.findViewById(R.id.pickedSomething);
+        mLostButton  = (Button) _view.findViewById(R.id.lostSomething);
         mHotListView  = (ListView) _view.findViewById(R.id.hotListView);
         mSwipeLayout = (SwipeRefreshLayout) _view.findViewById(R.id.hot_swipe_refresh);
+        mBg_lost_item = (ImageView) _view.findViewById(R.id.bg_lost_item);
+
         HandleRefreshAction();
         mSwipeLayout.setColorSchemeResources(
                 android.R.color.holo_blue_bright,

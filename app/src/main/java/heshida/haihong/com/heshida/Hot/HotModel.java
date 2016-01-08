@@ -10,8 +10,22 @@ public class HotModel {
     private String location;
     private String line;
     private String blocked;
+    private String losted;
 
     public HotModel() {
+    }
+
+    @Override
+    public String toString() {
+        return "HotModel{" +
+                "lostid='" + lostid + '\'' +
+                ", title='" + title + '\'' +
+                ", foundtime='" + foundtime + '\'' +
+                ", location='" + location + '\'' +
+                ", line='" + line + '\'' +
+                ", blocked='" + blocked + '\'' +
+                ", losted='" + losted + '\'' +
+                '}';
     }
 
     public String getLostid() {
@@ -62,15 +76,11 @@ public class HotModel {
         this.blocked = blocked;
     }
 
-    @Override
-    public String toString() {
-        return "HotModel{" +
-                "lostid='" + lostid + '\'' +
-                ", title='" + title + '\'' +
-                ", foundtime='" + foundtime + '\'' +
-                ", location='" + location + '\'' +
-                ", line='" + line + '\'' +
-                ", blocked='" + blocked + '\'' +
-                '}';
+    public String getLosted() {
+        return losted;
+    }
+
+    public void setLosted(String losted) {
+        this.losted = losted;
     }
 }
