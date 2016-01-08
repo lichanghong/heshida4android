@@ -39,7 +39,7 @@ public class SchoolWebActivity extends Activity {
             @Override
             public void leftClick() {
                 finish();
-                overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
 

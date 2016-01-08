@@ -187,6 +187,7 @@ public class TabHomeFragment extends Fragment {
 //                Toast.makeText(_view.getContext(),"handleaction",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(_view.getContext(),SchoolWebActivity.class);
                 startActivity(intent);
+                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
             }
         });

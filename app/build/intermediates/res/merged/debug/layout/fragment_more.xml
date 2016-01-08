@@ -17,9 +17,36 @@
     <ListView
         android:id="@+id/more_listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         >
     </ListView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        >
+        <ImageView
+            android:id="@+id/versionImageView"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heshida"
+            />
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/versionImageView"
+            android:layout_width="match_parent"
+            android:text="版本"
+            android:textSize="10sp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
 
 

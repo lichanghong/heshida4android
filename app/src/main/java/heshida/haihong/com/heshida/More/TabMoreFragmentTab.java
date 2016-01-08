@@ -3,6 +3,8 @@ package heshida.haihong.com.heshida.More;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -14,7 +16,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,6 +37,7 @@ public class TabMoreFragmentTab extends Fragment {
     private View _view;
     private ListView mListView;
     private ArrayAdapter<String> mAdapter;
+    private TextView mVersionText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,16 +49,12 @@ public class TabMoreFragmentTab extends Fragment {
         } else {
             _view = inflater.inflate(R.layout.fragment_more, null);
             initView();
-
+            initData();
             Log.i("lifetime---", "oncreateview-------TabMoreFragmentTab----------------");        }
         return _view;
     }
 
-    private void initView() {
-        mListView = (ListView) _view.findViewById(R.id.more_listView);
-
-        mListView.setAdapter(mAdapter);
-
+    private void initData() {
         String[] data = {
                 "意见反馈", "联系我们",
                 "关于我们", "退出登陆",
@@ -64,6 +66,38 @@ public class TabMoreFragmentTab extends Fragment {
         mAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.preference_category,d);
 
         mListView.setAdapter(mAdapter);
+        ListViewCellClick();
+        mVersionText.setText("当前版本号:"+getAppVersionName());
+
+    }
+
+    private void initView() {
+        mVersionText = (TextView) _view.findViewById(R.id.versionText);
+        mListView = (ListView) _view.findViewById(R.id.more_listView);
+
+    }
+
+    /**
+     * 返回当前程序版本名
+     */
+    public String getAppVersionName() {
+        String versionName = "";
+        try {
+            // ---get the package info---
+            PackageManager pm = _view.getContext().getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(_view.getContext().getPackageName(), 0);
+            versionName = pi.versionName;
+            if (versionName == null || versionName.length() <= 0) {
+                return "";
+            }
+        } catch (Exception e) {
+            Log.e("VersionInfo", "Exception", e);
+        }
+        return versionName;
+    }
+
+
+    private void ListViewCellClick() {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
