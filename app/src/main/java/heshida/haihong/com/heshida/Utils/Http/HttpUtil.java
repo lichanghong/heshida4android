@@ -46,7 +46,7 @@ public class HttpUtil {
     {
         return client;
     }
-
+    
     //------------------- url --
     public static String getHostname(Context context)
     {
@@ -56,38 +56,36 @@ public class HttpUtil {
     {
         return getHostname(context)+context.getString(R.string.feedback);
     }
-
+    
     public static String saveHotDataURL(Context context)
     {
         return getHostname(context)+context.getString(R.string.savelostfound);
     }
     public static String getHotDataURL(Context context)
     {
-        return  "http://heshidatest.applinzi.com"+"/admin.php/getlostfound";
-
-//        return getHostname(context)+context.getString(R.string.getlostfound);
+        return  getHostname(context)+context.getString(R.string.getlostfound);
     }
     public static String loadGroupNames(Context context)
     {
-        return getHostname(context)+"/user/societynames";
+        return getHostname(context)+context.getString(R.string.societynames);
     }
-
+    
     public static String loadGroupDetail(Context context)
     {
-        return getHostname(context)+"/user/societydetail";
+        return getHostname(context)+context.getString(R.string.societydetail);
     }
-
+    
     public static String reportFakeMessage(Context context)
     {
-        return getHostname(context)+"/user/lostfoundblock";
+        return getHostname(context)+context.getString(R.string.lostfoundblock);
     }
     public static String loadMainData(Context context)
     {
-        return getHostname(context)+"/user/getheshidapage";
+        return getHostname(context)+ context.getString(R.string.getheshidapage);
     }
-
+    
     public static String  getUrl(HashMap<String, String> params) {
-         // 添加url参数
+        // 添加url参数
         StringBuilder stringBuilder = new StringBuilder();
         if (params != null) {
             Iterator<String> it = params.keySet().iterator();

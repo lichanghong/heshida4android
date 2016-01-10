@@ -14,6 +14,7 @@ public class ADManager {
     YouMiADController   youMiADController;
     BaiduADController   baiduADController;
     WAPSADController    wapsadController;
+    QHADController      qhadController;
 
     public ADManager(Context mContext,Activity mActivity) {
         this.mContext = mContext;
@@ -28,6 +29,7 @@ public class ADManager {
             sSingleton.youMiADController   = new YouMiADController(mActivity);
             sSingleton.baiduADController   = new BaiduADController(mActivity);
             sSingleton.wapsadController    = new WAPSADController(mActivity);
+            sSingleton.qhadController      = new QHADController(mActivity);
         }
         return sSingleton;
     }
@@ -49,6 +51,10 @@ public class ADManager {
     public void showWAPSAD(View mView)
     {
         wapsadController.showADView(mView);
+    }
+    public void showQHAD(View mView)
+    {
+        qhadController.showADView(mView);
     }
 
 }

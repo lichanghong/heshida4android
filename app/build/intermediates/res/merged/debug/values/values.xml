@@ -226,12 +226,15 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">河南师范</string>
-    <string name="feedback">/User/feedback</string>
-    <string name="getlostfound">/user/getlostfound</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="feedback">feedback</string>
+    <string name="getheshidapage">getheshidapage</string>
+    <string name="getlostfound">getlostfound</string>
     <string name="home_top_title">河南师范大学</string>
-    <string name="hostname">http://1.heshida.sinaapp.com</string>
-    <string name="savelostfound">/user/savelostfound</string>
+    <string name="hostname">http://heshidatest.applinzi.com/admin.php/</string>
+    <string name="lostfoundblock">lostfoundblock</string>
+    <string name="savelostfound">savelostfound</string>
+    <string name="societydetail">societydetail</string>
+    <string name="societynames">societynames</string>
     <!-- From: file:/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>

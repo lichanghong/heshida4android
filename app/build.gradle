@@ -42,4 +42,5 @@ dependencies {
     compile files('libs/baidu_cuid.jar')
     compile files('libs/YoumiSdk_v5.5.1_2016-01-05.jar')
     compile files('libs/YoumiSdk_v5.3.1_2016-01-05.jar')
+    compile files('libs/qhad_0.1.12.1113.jar')
 }

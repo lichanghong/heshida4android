@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">河南师范</string>
-
+    
     <string name="home_top_title">河南师范大学</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_joke">joke</string>
-
-    <string name="hello_world">Hello world!</string>
+    
     <string name="title_activity_group">Group</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_login">LoginActivity</string>
@@ -13,12 +12,16 @@
     <string name="title_activity_group_detail">GroupDetailActivity</string>
     <string name="title_activity_schedule_setting">ScheduleSettingActivity</string>
     
-
-    <string name="hostname">http://1.heshida.sinaapp.com</string>
-    <string name="feedback">/User/feedback</string>
-    <string name="savelostfound">/user/savelostfound</string>
-    <string name="getlostfound">/user/getlostfound</string>
-
+    
+    <string name="hostname">http://heshidatest.applinzi.com/admin.php/</string>
+    <string name="feedback">feedback</string>
+    <string name="savelostfound">savelostfound</string>
+    <string name="getlostfound">getlostfound</string>
+    <string name="societynames">societynames</string>
+    <string name="societydetail">societydetail</string>
+    <string name="lostfoundblock">lostfoundblock</string>
+    <string name="getheshidapage">getheshidapage</string>
+    
     <string name="title_activity_found">FoundActivity</string>
     <string name="title_activity_school_web">SchoolWebActivity</string>
 </resources>

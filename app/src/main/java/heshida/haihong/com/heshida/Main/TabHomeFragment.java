@@ -80,15 +80,12 @@ public class TabHomeFragment extends Fragment {
         if (!hasAD)
         {
             initData();
-            //webview
-//            _mWebView.getSettings().setJavaScriptEnabled(true);
-//            _mWebView.loadUrl("http://www.henannu.edu.cn/");
         }
     }
 
     private void initData() {
-//        ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
-//        adManager.showYouMiAD(_view);
+        ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
+        adManager.showQHAD(_view);
         mURLs = new ArrayList<>();
         mUniversalImageUtil = new UniversalImageUtil(_view.getContext(),getActivity());
         mUniversalImageUtil.configImageLoader();
