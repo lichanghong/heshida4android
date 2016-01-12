@@ -33,6 +33,7 @@ import cn.domob.android.ads.AdManager;
 import heshida.haihong.com.heshida.AD.ADManager;
 import heshida.haihong.com.heshida.AD.DuomengADController;
 import heshida.haihong.com.heshida.AD.YouMiADController;
+import heshida.haihong.com.heshida.AV.HHAVActivity;
 import heshida.haihong.com.heshida.R;
 import heshida.haihong.com.heshida.Utils.Http.UniversalImageUtil;
 import heshida.haihong.com.heshida.Utils.net.Response;
@@ -41,13 +42,11 @@ import heshida.haihong.com.heshida.Utils.net.Response;
  * Created by admin on 13-11-23.
  */
 public class TabHomeFragment extends Fragment {
-    private static final String OpenDuoMengADCode  = "1451576100";
     private static final String OpenYouMiADCode    = "1451576200";
     boolean hasAD = false;
     View _view;
     Button mWebSchoolBtn;
     //    LocationManager mLocationManager;
-//    WebView _mWebView;
     ScrollView mScrollView;
     private LinearLayout mGallery;
 
@@ -181,8 +180,8 @@ public class TabHomeFragment extends Fragment {
         mWebSchoolBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(_view.getContext(),"handleaction",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(_view.getContext(),SchoolWebActivity.class);
+//                Intent intent = new Intent(_view.getContext(),SchoolWebActivity.class);
+                Intent intent = new Intent(_view.getContext(),HHAVActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 

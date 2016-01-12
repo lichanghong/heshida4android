@@ -24,4 +24,7 @@
     
     <string name="title_activity_found">FoundActivity</string>
     <string name="title_activity_school_web">SchoolWebActivity</string>
+    <string name="title_activity_hhav">HHAVActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

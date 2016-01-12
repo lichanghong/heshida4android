@@ -1,19 +1,26 @@
 package heshida.haihong.com.heshida.Main;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import heshida.haihong.com.heshida.R;
 import heshida.haihong.com.heshida.TopBar;
 
 public class SchoolWebActivity extends Activity {
     TopBar mTopBar;
-    WebView mWebView;
+    private WebView mWebView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +32,6 @@ public class SchoolWebActivity extends Activity {
     }
 
     private void initData() {
-        mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.loadUrl("http://www.henannu.edu.cn/");
     }
 

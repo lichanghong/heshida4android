@@ -229,6 +229,7 @@
     <string name="feedback">feedback</string>
     <string name="getheshidapage">getheshidapage</string>
     <string name="getlostfound">getlostfound</string>
+    <string name="hello_world">Hello world!</string>
     <string name="home_top_title">河南师范大学</string>
     <string name="hostname">http://heshidatest.applinzi.com/admin.php/</string>
     <string name="lostfoundblock">lostfoundblock</string>
@@ -243,6 +244,7 @@
     <string name="title_activity_found">FoundActivity</string>
     <string name="title_activity_group">Group</string>
     <string name="title_activity_group_detail">GroupDetailActivity</string>
+    <string name="title_activity_hhav">HHAVActivity</string>
     <string name="title_activity_joke">joke</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_my_home">MyHomeActivity</string>

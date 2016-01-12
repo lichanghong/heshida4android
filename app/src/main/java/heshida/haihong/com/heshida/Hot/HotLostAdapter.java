@@ -62,7 +62,9 @@ public class HotLostAdapter extends BaseAdapter {
         holder.lost_item_time.setText(keyValuePair.get("time").toString());
         if (keyValuePair.get("losted").toString().equals("0"))
         {
-            holder.bg_image_tag.setImageResource(R.drawable.bg_found_item);
+//            holder.bg_image_tag.setImageResource(R.drawable.bg_found_item);
+            holder.bg_image_tag.setImageResource(R.drawable.video);
+
         }
         else
         {
