@@ -1,30 +1,105 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/avframelayout"
+    android:id="@+id/avLinerLayout"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <heshida.haihong.com.heshida.TopBar
+
+    <LinearLayout
+        android:id="@+id/av_pre_webLinerLayout"
+        android:background="#000"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/hhav_tabbar"
-        tools:background="#ffffff"
-        custom:buttonMode="left"
-        custom:leftBackground="#888888"
-        custom:leftHeight="40dp"
-        custom:rightHeight="35dp"
-        custom:leftMargin="12dp"
-        custom:leftWidth="40dp"
-        custom:title="Title1"
-        custom:titleTextColor="@android:color/black"
-        custom:titleTextSize="16sp"
-        >
-    </heshida.haihong.com.heshida.TopBar>
+        android:layout_height="wrap_content">
+        <heshida.haihong.com.heshida.TopBar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/hhav_tabbar"
+            tools:background="#ffffff"
+            custom:buttonMode="left"
+            custom:leftBackground="#888888"
+            custom:leftHeight="40dp"
+            custom:rightHeight="35dp"
+            custom:leftMargin="12dp"
+            custom:leftWidth="40dp"
+            custom:title="Title1"
+            custom:titleTextColor="@android:color/black"
+            custom:titleTextSize="16sp"
+            >
+        </heshida.haihong.com.heshida.TopBar>
+        <LinearLayout
+            android:background="#888888"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/av_detailImage"
+                android:layout_width="100dp"
+                android:background="@android:color/holo_red_dark"
+                android:layout_height="133dp" />
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textColor="#fff"
+                    android:text="电影名:"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    android:text="主演:"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    android:text="年份:"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:text="类别:"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+            <TextView
+                android:text="剧情简介"
+                android:textColor="#ffffff"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <TextView
+            android:text="无"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
     <WebView
         android:id="@+id/av_webview"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</FrameLayout>
+</LinearLayout>
 
 

@@ -2,6 +2,7 @@ package heshida.haihong.com.heshida.AV;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.net.http.SslError;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +13,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.webkit.ConsoleMessage;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -55,21 +59,18 @@ public class HHAVActivity extends Activity {
 
             //--------webview
 
-            frameLayout = (FrameLayout)findViewById(R.id.avframelayout);
+            frameLayout = (FrameLayout)findViewById(R.id.avLinerLayout);
             webView = (WebView)findViewById(R.id.av_webview);
 
             webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
-
             webView.setWebViewClient(new MyWebviewCient());
 
             chromeClient = new MyChromeClient();
-
-            webView.setWebChromeClient(chromeClient);
+            webView.setWebChromeClient(new MyChromeClient());
             webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
             webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-
             webView.setHorizontalScrollBarEnabled(false);
             webView.setVerticalScrollBarEnabled(false);
 
@@ -79,8 +80,10 @@ public class HHAVActivity extends Activity {
             webView.getSettings().setPluginState(WebSettings.PluginState.ON);
             webView.getSettings().setLoadWithOverviewMode(true);
             webView.stopLoading();
+            webView.setNetworkAvailable(true);
             webView.requestFocus();
-            webView.loadUrl("http://1.ckplayertest.applinzi.com/demo2.htm");
+//            webView.loadUrl("http://1.ckplayertest.applinzi.com/demo2.htm");
+            webView.loadUrl("http://m.tonghuacun.com/letvyun/ck/ckplayer.swf?f=http://movie.ks.js.cn/flv/other/1_0.flv");
         }
         else if(savedInstanceState != null){
             webView.restoreState(savedInstanceState);
@@ -105,31 +108,28 @@ public class HHAVActivity extends Activity {
     }
 
     public class MyWebviewCient extends WebViewClient {
-        @Override
-        public WebResourceResponse shouldInterceptRequest(WebView view,
-                                                          String url) {
-            WebResourceResponse response = null;
-            response = super.shouldInterceptRequest(view, url);
-            return response;
-        }
-
-        @Override
-        public boolean shouldOverrideKeyEvent(WebView view, KeyEvent event) {
-            return super.shouldOverrideKeyEvent(view, event);
-        }
 
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
         }
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
 
         @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
+        public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+            super.onReceivedError(view, request, error);
+            Toast.makeText(HHAVActivity.this,"onReceivedError",Toast.LENGTH_LONG).show();
+            String errorHtml = "<html><body><h1>Page not find!</h1></body></html>";
+            view.loadData(errorHtml, "text/html", "UTF-8");
         }
+
     }
 
-    public class MyChromeClient extends WebChromeClient{
+  public class MyChromeClient extends WebChromeClient{
 
         @Override
         public void onShowCustomView(View view, CustomViewCallback callback) {
@@ -157,8 +157,7 @@ public class HHAVActivity extends Activity {
         @Override
         public View getVideoLoadingProgressView() {
             FrameLayout frameLayout = new FrameLayout(getApplicationContext());
-            frameLayout.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
-                    FrameLayout.LayoutParams.MATCH_PARENT));
+            frameLayout.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
             return frameLayout;
         }
 
@@ -209,5 +208,11 @@ public class HHAVActivity extends Activity {
         chromeClient = null;
         myView = null;
         myCallBack = null;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(HHAVActivity.this,"onDestroy",Toast.LENGTH_LONG).show();
     }
 }

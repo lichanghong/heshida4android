@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/bg_lost_item"
+        android:layout_width="74dp"
+        android:layout_height="50dp"
+        android:src="@drawable/bg_lost_av"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lost_item_title"
+            android:text="谁的一卡通丢了，卡号是1231231232"
+            android:textColor="#a39480"
+            android:layout_width="match_parent"
+            android:textSize="10dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/lost_item_time"
+            android:text="2015年10月21日十点"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:textColor="#a39480"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
