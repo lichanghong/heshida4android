@@ -36,6 +36,7 @@ import heshida.haihong.com.heshida.AD.YouMiADController;
 import heshida.haihong.com.heshida.AV.HHAVActivity;
 import heshida.haihong.com.heshida.R;
 import heshida.haihong.com.heshida.Utils.Http.UniversalImageUtil;
+import heshida.haihong.com.heshida.Utils.VersionManager;
 import heshida.haihong.com.heshida.Utils.net.Response;
 
 /**
@@ -180,10 +181,12 @@ public class TabHomeFragment extends Fragment {
         mWebSchoolBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                VersionManager versionManager = VersionManager.getInstance(getActivity());
+                versionManager.checkUpdate();
 //                Intent intent = new Intent(_view.getContext(),SchoolWebActivity.class);
-                Intent intent = new Intent(_view.getContext(),HHAVActivity.class);
-                startActivity(intent);
-                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+//                Intent intent = new Intent(_view.getContext(),HHAVActivity.class);
+//                startActivity(intent);
+//                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
             }
         });

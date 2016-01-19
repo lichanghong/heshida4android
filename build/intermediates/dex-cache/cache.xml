@@ -2,95 +2,95 @@
 <items version="2" >
 
     <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/locSDK_6.13.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/internal_impl-23.0.0-8c99f5b7703bb356c0dd1a139bbf9b7ba8b08a92.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/classes-b09eafd7df4c63a38a9783aa67f0215e51ab3aaa.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/universal-image-loader-1.9.5.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/universal-image-loader-1.9.5-4e529656b52ac3d2bb51777a4a4de26d00c5c34b.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/YoumiSdk_v5.3.1_2016-01-05.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2a6c131bd17bef395563c520f23ca71b9a957da5">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/YoumiSdk_v5.3.1_2016-01-05-5e2747eabf820ba261a06a7fcaaf1512f4fc2acc.jar" />
+        sha1="89074d1026c4938136ae6922ac9e7b0130dc27d4">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/locSDK_6.13-b4456f579ea844701a1d49ebda90f7b3561a8c72.jar" />
     </item>
     <item
         jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/android-async-http-1.4.3.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="f70e680861fdf9449819003e7799a4e9aca047f8">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/android-async-http-1.4.3-f858c31d39a616f1180de88c0bd1b18404b9c194.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_cuid.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="58de9ecfba229dbb2c3eb3f45dbe284ba58100ea">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/baidu_cuid-3caafa361f39bfbb69cf976dca6c61778289899b.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/AppOffer_2.4.2.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="1c56582bf4d464df35bbe1d1e223c6fa70ca1ef0">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/AppOffer_2.4.2-61fd8306b76b16fdc90f6e6b18d3a8312a21ff8e.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/domob_android_sdk.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="d7d2e383de169a752a9ff470d2ff711a1cdc111c">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/domob_android_sdk-f1a7fd42a632f4b8c4b08fcbcd53a6269cf3e7d5.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/qhad_0.1.12.1113.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="d7a0e5e0c5380eee866afd81856edee159f1db36">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/qhad_0.1.12.1113-1d5c647f2361770d76ab6d1392341fd5b06ff394.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/classes-e25d1f77da81358d2fc0418a4e53826adb2dfa2e.jar" />
-    </item>
-    <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_appx_android_2.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="fdf78377a8b54f9dd855a3d3374c7e99741935ee">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/baidu_appx_android_2.0.0-5b545d7d05722ff21274f721863ba5c35872573b.jar" />
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.3-f858c31d39a616f1180de88c0bd1b18404b9c194.jar" />
     </item>
     <item
         jar="/Users/lichanghong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/support-annotations-23.0.0-f26da63086c9b8ef7a50016bdd2d595d0a5873c0.jar" />
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-f26da63086c9b8ef7a50016bdd2d595d0a5873c0.jar" />
     </item>
     <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/locSDK_6.13.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/AppOffer_2.4.2.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="89074d1026c4938136ae6922ac9e7b0130dc27d4">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/release/locSDK_6.13-b4456f579ea844701a1d49ebda90f7b3561a8c72.jar" />
+        sha1="1c56582bf4d464df35bbe1d1e223c6fa70ca1ef0">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/AppOffer_2.4.2-61fd8306b76b16fdc90f6e6b18d3a8312a21ff8e.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/YoumiSdk_v5.3.1_2016-01-05.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="2a6c131bd17bef395563c520f23ca71b9a957da5">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/YoumiSdk_v5.3.1_2016-01-05-5e2747eabf820ba261a06a7fcaaf1512f4fc2acc.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/classes-e25d1f77da81358d2fc0418a4e53826adb2dfa2e.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/qhad_0.1.12.1113.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d7a0e5e0c5380eee866afd81856edee159f1db36">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/qhad_0.1.12.1113-1d5c647f2361770d76ab6d1392341fd5b06ff394.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-8c99f5b7703bb356c0dd1a139bbf9b7ba8b08a92.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/domob_android_sdk.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d7d2e383de169a752a9ff470d2ff711a1cdc111c">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/domob_android_sdk-f1a7fd42a632f4b8c4b08fcbcd53a6269cf3e7d5.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_appx_android_2.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="fdf78377a8b54f9dd855a3d3374c7e99741935ee">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_appx_android_2.0.0-5b545d7d05722ff21274f721863ba5c35872573b.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_cuid.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="58de9ecfba229dbb2c3eb3f45dbe284ba58100ea">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_cuid-3caafa361f39bfbb69cf976dca6c61778289899b.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5-4e529656b52ac3d2bb51777a4a4de26d00c5c34b.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/classes-b09eafd7df4c63a38a9783aa67f0215e51ab3aaa.jar" />
     </item>
 
 </items>

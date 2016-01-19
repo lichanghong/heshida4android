@@ -460,7 +460,7 @@ int drawable find_lost_type1 0x7f020046
 int drawable heshida 0x7f020047
 int drawable more 0x7f020048
 int drawable notification_template_icon_bg 0x7f02005f
-int drawable second 0x7f020049
+int drawable secondly 0x7f020049
 int drawable selector_tab_bg 0x7f02004a
 int drawable selector_tab_global 0x7f02004b
 int drawable selector_tab_group 0x7f02004c
@@ -502,7 +502,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003e
 int id action_mode_bar_stub 0x7f0c003d
 int id action_mode_close_button 0x7f0c0026
-int id action_settings 0x7f0c00af
+int id action_settings 0x7f0c00b0
 int id activity_chooser_view_content 0x7f0c0027
 int id adcontainer 0x7f0c007a
 int id alertTitle 0x7f0c0031
@@ -595,7 +595,7 @@ int id parentPanel 0x7f0c002e
 int id pickedSomething 0x7f0c007b
 int id progress_circular 0x7f0c0005
 int id progress_horizontal 0x7f0c0006
-int id progress_indicator 0x7f0c00ae
+int id progress_indicator 0x7f0c00af
 int id radio 0x7f0c003b
 int id rb_first 0x7f0c0062
 int id rg_tab 0x7f0c0061
@@ -650,6 +650,7 @@ int id tvam 0x7f0c00a7
 int id tvpm 0x7f0c00aa
 int id txt_content 0x7f0c006b
 int id up 0x7f0c0008
+int id update_progress 0x7f0c00ae
 int id useLogo 0x7f0c0012
 int id versionImageView 0x7f0c0080
 int id versionText 0x7f0c0081
@@ -719,8 +720,9 @@ int layout select_dialog_item_material 0x7f040034
 int layout select_dialog_multichoice_material 0x7f040035
 int layout select_dialog_singlechoice_material 0x7f040036
 int layout simple_list_item 0x7f040037
-int layout support_simple_spinner_dropdown_item 0x7f040038
-int layout video_loading_progress 0x7f040039
+int layout softupdate_progress 0x7f040038
+int layout support_simple_spinner_dropdown_item 0x7f040039
+int layout video_loading_progress 0x7f04003a
 int menu menu_found 0x7f0d0000
 int menu menu_group_detail 0x7f0d0001
 int menu menu_hhav 0x7f0d0002

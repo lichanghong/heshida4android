@@ -1745,7 +1745,7 @@ containing a value of this type.
         public static final int heshida=0x7f020047;
         public static final int more=0x7f020048;
         public static final int notification_template_icon_bg=0x7f02005f;
-        public static final int second=0x7f020049;
+        public static final int secondly=0x7f020049;
         public static final int selector_tab_bg=0x7f02004a;
         public static final int selector_tab_global=0x7f02004b;
         public static final int selector_tab_group=0x7f02004c;
@@ -1789,7 +1789,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003e;
         public static final int action_mode_bar_stub=0x7f0c003d;
         public static final int action_mode_close_button=0x7f0c0026;
-        public static final int action_settings=0x7f0c00af;
+        public static final int action_settings=0x7f0c00b0;
         public static final int activity_chooser_view_content=0x7f0c0027;
         public static final int adcontainer=0x7f0c007a;
         public static final int alertTitle=0x7f0c0031;
@@ -1882,7 +1882,7 @@ containing a value of this type.
         public static final int pickedSomething=0x7f0c007b;
         public static final int progress_circular=0x7f0c0005;
         public static final int progress_horizontal=0x7f0c0006;
-        public static final int progress_indicator=0x7f0c00ae;
+        public static final int progress_indicator=0x7f0c00af;
         public static final int radio=0x7f0c003b;
         public static final int rb_first=0x7f0c0062;
         public static final int rg_tab=0x7f0c0061;
@@ -1937,6 +1937,7 @@ containing a value of this type.
         public static final int tvpm=0x7f0c00aa;
         public static final int txt_content=0x7f0c006b;
         public static final int up=0x7f0c0008;
+        public static final int update_progress=0x7f0c00ae;
         public static final int useLogo=0x7f0c0012;
         public static final int versionImageView=0x7f0c0080;
         public static final int versionText=0x7f0c0081;
@@ -2010,8 +2011,9 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040035;
         public static final int select_dialog_singlechoice_material=0x7f040036;
         public static final int simple_list_item=0x7f040037;
-        public static final int support_simple_spinner_dropdown_item=0x7f040038;
-        public static final int video_loading_progress=0x7f040039;
+        public static final int softupdate_progress=0x7f040038;
+        public static final int support_simple_spinner_dropdown_item=0x7f040039;
+        public static final int video_loading_progress=0x7f04003a;
     }
     public static final class menu {
         public static final int menu_found=0x7f0d0000;

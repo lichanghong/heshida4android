@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.jar.Attributes;
 
 import heshida.haihong.com.heshida.R;
+import heshida.haihong.com.heshida.Utils.VersionManager;
 import heshida.haihong.com.heshida.Utils.net.Response;
 
 /**
@@ -57,7 +58,8 @@ public class TabMoreFragmentTab extends Fragment {
     private void initData() {
         String[] data = {
                 "意见反馈", "联系我们",
-                "关于我们", "退出登陆",
+                "关于我们", "检测更新",
+                "退出登陆",
         };
 
 
@@ -115,6 +117,10 @@ public class TabMoreFragmentTab extends Fragment {
                     }
                     break;
                     case 3: {
+                        checkUpdate();
+                    }
+                    break;
+                    case 4: {
                         exitApp();
                     }
                     break;
@@ -123,6 +129,12 @@ public class TabMoreFragmentTab extends Fragment {
                 }
             }
         });
+    }
+
+    private void checkUpdate()
+    {
+        VersionManager versionManager = VersionManager.getInstance(getActivity());
+        versionManager.checkUpdate();
     }
 
     private void feedBack() {

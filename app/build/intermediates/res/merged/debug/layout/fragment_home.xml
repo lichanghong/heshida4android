@@ -150,7 +150,7 @@
                     android:textColor="#0066ff"
                     android:background="@android:color/transparent"
                     android:layout_height="match_parent"
-                    android:drawableTop="@drawable/second"
+                    android:drawableTop="@drawable/secondly"
                     android:text="校园二手"
                     android:layout_width="0dp"
                     android:layout_weight="1"
