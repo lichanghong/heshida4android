@@ -1,12 +1,14 @@
 package heshida.haihong.com.heshida.AV;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -22,6 +24,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.lang.reflect.InvocationTargetException;
@@ -31,11 +34,13 @@ import heshida.haihong.com.heshida.TopBar;
 
 public class HHAVActivity extends Activity {
     TopBar mTopBar;
-    private FrameLayout frameLayout = null;
+    private LinearLayout linearLayout = null;
     private WebView webView = null;
     private WebChromeClient chromeClient = null;
     private View myView = null;
     private WebChromeClient.CustomViewCallback myCallBack = null;
+    private View xprogressvideo;
+    private ProgressDialog waitdialog = null;
 
 
     @Override
@@ -57,9 +62,15 @@ public class HHAVActivity extends Activity {
                 }
             });
 
-            //--------webview
+            waitdialog = new ProgressDialog(this);
+            waitdialog.setTitle("提示");
+            waitdialog.setMessage("视频页面加载中...");
+            waitdialog.setIndeterminate(true);
+            waitdialog.setCancelable(true);
+            waitdialog.show();
 
-            frameLayout = (FrameLayout)findViewById(R.id.avLinerLayout);
+            //--------webview
+            linearLayout = (LinearLayout)findViewById(R.id.avLinerLayout);
             webView = (WebView)findViewById(R.id.av_webview);
 
             webView.getSettings().setJavaScriptEnabled(true);
@@ -82,8 +93,8 @@ public class HHAVActivity extends Activity {
             webView.stopLoading();
             webView.setNetworkAvailable(true);
             webView.requestFocus();
-//            webView.loadUrl("http://1.ckplayertest.applinzi.com/demo2.htm");
-            webView.loadUrl("http://m.tonghuacun.com/letvyun/ck/ckplayer.swf?f=http://movie.ks.js.cn/flv/other/1_0.flv");
+            webView.loadUrl("http://1.heshidastudent.applinzi.com/Av/startav.html");
+//            webView.loadUrl("http://m.tonghuacun.com/letvyun/ck/ckplayer.swf?f=http://movie.ks.js.cn/flv/other/1_0.flv");
         }
         else if(savedInstanceState != null){
             webView.restoreState(savedInstanceState);
@@ -120,8 +131,16 @@ public class HHAVActivity extends Activity {
         }
 
         @Override
+        public void onPageFinished(WebView view, String url) {
+            super.onPageFinished(view, url);
+            waitdialog.dismiss();
+        }
+
+        @Override
         public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
             super.onReceivedError(view, request, error);
+            waitdialog.dismiss();
+
             Toast.makeText(HHAVActivity.this,"onReceivedError",Toast.LENGTH_LONG).show();
             String errorHtml = "<html><body><h1>Page not find!</h1></body></html>";
             view.loadData(errorHtml, "text/html", "UTF-8");
@@ -137,8 +156,8 @@ public class HHAVActivity extends Activity {
                 callback.onCustomViewHidden();
                 return;
             }
-            frameLayout.removeView(webView);
-            frameLayout.addView(view);
+            linearLayout.removeView(webView);
+            linearLayout.addView(view);
             myView = view;
             myCallBack = callback;
         }
@@ -148,17 +167,22 @@ public class HHAVActivity extends Activity {
             if(myView == null){
                 return;
             }
-            frameLayout.removeView(myView);
+            linearLayout.removeView(myView);
             myView = null;
-            frameLayout.addView(webView);
+            linearLayout.addView(webView);
             myCallBack.onCustomViewHidden();
         }
 
+      // 视频加载时进程loading
         @Override
         public View getVideoLoadingProgressView() {
-            FrameLayout frameLayout = new FrameLayout(getApplicationContext());
-            frameLayout.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
-            return frameLayout;
+            if (xprogressvideo == null) {
+                LayoutInflater inflater = LayoutInflater
+                        .from(HHAVActivity.this);
+                xprogressvideo = inflater.inflate(
+                        R.layout.video_loading_progress, null);
+            }
+            return xprogressvideo;
         }
 
         @Override
