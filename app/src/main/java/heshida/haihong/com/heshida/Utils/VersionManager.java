@@ -17,6 +17,11 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.loopj.android.http.JsonHttpResponseHandler;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -27,12 +32,14 @@ import java.net.URL;
 import java.util.HashMap;
 
 import heshida.haihong.com.heshida.R;
+import heshida.haihong.com.heshida.Utils.Http.HttpUtil;
 
 /**
  * Created by lichanghong on 1/20/16.
  */
 public class VersionManager {
     Activity mActivity;
+    String mDownURL;
 
     public VersionManager(Activity mActivity) {
         this.mActivity = mActivity;
@@ -51,8 +58,6 @@ public class VersionManager {
     private static final int DOWNLOAD = 1;
     /* 下载结束 */
     private static final int DOWNLOAD_FINISH = 2;
-    /* 保存解析的XML信息 */
-    HashMap<String, String> mHashMap;
     /* 下载保存路径 */
     private String mSavePath;
     /* 记录进度条数量 */
@@ -87,44 +92,45 @@ public class VersionManager {
      * 检测软件更新
      */
     public void checkUpdate() {
-        if (isUpdate()) {
-            // 显示提示对话框
-            showNoticeDialog();
-        } else {
-            Toast.makeText(mActivity.getApplicationContext(), "已经是最新版本", Toast.LENGTH_LONG).show();
-        }
+    // 获取当前软件版本
+    final int versionCode = getVersionCode(mActivity);
+    // 把version.xml放到网络上，然后获取文件信息
+    HttpUtil.get("http://1.heshidastudent.applinzi.com/admin.php/app/checkupdate",
+            new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(JSONObject jsonObject) {
+                    super.onSuccess(jsonObject);
+                    String version,name;
+                    try {
+                        version = jsonObject.getString("version");
+                        name = jsonObject.getString("name");
+                        mDownURL = jsonObject.getString("url");
+                        if (Integer.parseInt(version)>versionCode)
+                        {
+                            showNoticeDialog(name);
+                        }
+                        else if (Integer.parseInt(version)==versionCode)
+                        {
+                            Toast.makeText(mActivity, "已是最新版本", Toast.LENGTH_LONG).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(mActivity, "版本异常", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Throwable throwable, JSONObject jsonObject) {
+                    super.onFailure(throwable, jsonObject);
+                    Toast.makeText(mActivity, "检测失败,请稍后重试", Toast.LENGTH_LONG).show();
+                }
+            });
     }
 
-    /**
-     * 检查软件是否有更新版本
-     *
-     * @return
-     */
-    private boolean isUpdate() {
-//            // 获取当前软件版本
-            int versionCode = getVersionCode(mActivity);
-            // 把version.xml放到网络上，然后获取文件信息
-//            InputStream inStream = ParseXmlService.class.getClassLoader().getResourceAsStream("version.xml");
-//            // 解析XML文件。 由于XML文件比较小，因此使用DOM方式进行解析
-//            ParseXmlService service = new ParseXmlService();
-//            try
-//            {
-//                mHashMap = service.parseXml(inStream);
-//            } catch (Exception e)
-//            {
-//                e.printStackTrace();
-//            }
-//            if (null != mHashMap)
-//            {
-//                int serviceCode = Integer.valueOf(mHashMap.get("version"));
-//                // 版本判断
-//                if (serviceCode > versionCode)
-//                {
-                    return true;
-//                }
-//            }
-//        return false;
-    }
 
     /**
      * 获取软件版本号
@@ -146,10 +152,10 @@ public class VersionManager {
     /**
      * 显示软件更新对话框
      */
-    private void showNoticeDialog() {
+    private void showNoticeDialog(String name) {
         // 构造对话框
         AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-        builder.setTitle("河南师范可以升级了");
+        builder.setTitle(name);
        // builder.setMessage("升级应用");
         // 更新
         builder.setPositiveButton("马上升级", new DialogInterface.OnClickListener() {
@@ -216,84 +222,84 @@ public class VersionManager {
     private class downloadApkThread extends Thread {
         @Override
         public void run() {
-//            try {
-//                // 判断SD卡是否存在，并且是否具有读写权限
-//                if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-//                    // 获得存储卡的路径
-//                    String sdpath = Environment.getExternalStorageDirectory() + "/";
-//                    mSavePath = sdpath + "download";
-//                    URL url = new URL(mHashMap.get("url"));
-//                    // 创建连接
-//                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-//                    conn.connect();
-//                    // 获取文件大小
-//                    int length = conn.getContentLength();
-//                    // 创建输入流
-//                    InputStream is = conn.getInputStream();
-//
-//                    File file = new File(mSavePath);
-//                    // 判断文件目录是否存在
-//                    if (!file.exists()) {
-//                        file.mkdir();
-//                    }
-//                    File apkFile = new File(mSavePath, mHashMap.get("name"));
-//                    FileOutputStream fos = new FileOutputStream(apkFile);
-//                    int count = 0;
-//                    // 缓存
-//                    byte buf[] = new byte[1024];
-//                    // 写入到文件中
-//                    do {
-//                        int numread = is.read(buf);
-//                        count += numread;
-//                        // 计算进度条位置
-//                        progress = (int) (((float) count / length) * 100);
-//                        // 更新进度
-//                        mHandler.sendEmptyMessage(DOWNLOAD);
-//                        if (numread <= 0) {
-//                            // 下载完成
-//                            mHandler.sendEmptyMessage(DOWNLOAD_FINISH);
-//                            break;
-//                        }
-//                        // 写入文件
-//                        fos.write(buf, 0, numread);
-//                    } while (!cancelUpdate);// 点击取消就停止下载.
-//                    fos.close();
-//                    is.close();
-//                }
-//            } catch (MalformedURLException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                // 判断SD卡是否存在，并且是否具有读写权限
+                if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                    // 获得存储卡的路径
+                    String sdpath = Environment.getExternalStorageDirectory() + "/";
+                    mSavePath = sdpath + "download";
+                    URL url = new URL(mDownURL);
+                    // 创建连接
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.connect();
+                    // 获取文件大小
+                    int length = conn.getContentLength();
+                    // 创建输入流
+                    InputStream is = conn.getInputStream();
+
+                    File file = new File(mSavePath);
+                    // 判断文件目录是否存在
+                    if (!file.exists()) {
+                        file.mkdir();
+                    }
+                    File apkFile = new File(mSavePath, "heshida.apk");
+                    FileOutputStream fos = new FileOutputStream(apkFile);
+                    int count = 0;
+                    // 缓存
+                    byte buf[] = new byte[1024];
+                    // 写入到文件中
+                    do {
+                        int numread = is.read(buf);
+                        count += numread;
+                        // 计算进度条位置
+                        progress = (int) (((float) count / length) * 100);
+                        // 更新进度
+                        mHandler.sendEmptyMessage(DOWNLOAD);
+                        if (numread <= 0) {
+                            // 下载完成
+                            mHandler.sendEmptyMessage(DOWNLOAD_FINISH);
+                            break;
+                        }
+                        // 写入文件
+                        fos.write(buf, 0, numread);
+                    } while (!cancelUpdate);// 点击取消就停止下载.
+                    fos.close();
+                    is.close();
+                }
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                downLoadError();
+            } catch (IOException e) {
+                e.printStackTrace();
+                downLoadError();
+            }
             // 取消下载对话框显示
             mDownloadDialog.dismiss();
         }
     }
 
-    ;
+    private void downLoadError()
+    {
+        mActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(mActivity, "新版不存在,请反馈给管理员", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
     /**
      * 安装APK文件
      */
     private void installApk() {
-        File apkfile = new File(mSavePath, mHashMap.get("name"));
+        File apkfile = new File(mSavePath, "heshida.apk");
         if (!apkfile.exists()) {
+            downLoadError();
             return;
         }
         // 通过Intent安装APK文件
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setDataAndType(Uri.parse("file://" + apkfile.toString()), "application/vnd.android.package-archive");
-        mActivity.getApplication().startActivity(i);
-    }
-
-    /*
- * 获取当前程序的版本号
- */
-    private String getVersionName() throws Exception {
-        //获取packagemanager的实例
-        PackageManager packageManager = mActivity.getPackageManager();
-        //getPackageName()是你当前类的包名，0代表是获取版本信息
-        PackageInfo packInfo = packageManager.getPackageInfo(mActivity.getPackageName(), 0);
-        return packInfo.versionName;
+        mActivity.startActivity(i);
     }
 }

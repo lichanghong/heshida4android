@@ -27,4 +27,6 @@
     <string name="title_activity_hhav">HHAVActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="xiaoyuan_dian_ping">校园点评</string>
+    <string name="title_activity_comment_school">CommentSchoolActivity</string>
 </resources>

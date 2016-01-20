@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/topbarFound"
-        tools:background="#ffffff"
         custom:buttonMode="left"
         custom:leftHeight="40dp"
         custom:leftMargin="12dp"

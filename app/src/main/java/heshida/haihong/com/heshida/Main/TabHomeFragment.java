@@ -34,6 +34,7 @@ import heshida.haihong.com.heshida.AD.ADManager;
 import heshida.haihong.com.heshida.AD.DuomengADController;
 import heshida.haihong.com.heshida.AD.YouMiADController;
 import heshida.haihong.com.heshida.AV.HHAVActivity;
+import heshida.haihong.com.heshida.Comment.CommentSchoolActivity;
 import heshida.haihong.com.heshida.R;
 import heshida.haihong.com.heshida.Utils.Http.UniversalImageUtil;
 import heshida.haihong.com.heshida.Utils.VersionManager;
@@ -46,7 +47,7 @@ public class TabHomeFragment extends Fragment {
     private static final String OpenYouMiADCode    = "1451576200";
     boolean hasAD = false;
     View _view;
-    Button mWebSchoolBtn;
+    Button mWebSchoolBtn,mCommentSchoolBtn,mSecondhandBtn;
     //    LocationManager mLocationManager;
     ScrollView mScrollView;
     private LinearLayout mGallery;
@@ -152,8 +153,6 @@ public class TabHomeFragment extends Fragment {
         textView1.setText(mPageNews.get(0).getTitle());
         textView2.setText(mPageNews.get(1).getTitle());
         textView3.setText(mPageNews.get(2).getTitle());
-
-
      }
 
     //获取屏幕的宽度
@@ -174,6 +173,8 @@ public class TabHomeFragment extends Fragment {
         mScrollView = (ScrollView) _view.findViewById(R.id.mainScrollView);
         mGallery    = (LinearLayout) _view.findViewById(R.id.homegallery);
         mWebSchoolBtn = (Button) _view.findViewById(R.id.webSchoolBtn);
+        mCommentSchoolBtn = (Button) _view.findViewById(R.id.commentschoolBtn);
+        mSecondhandBtn = (Button) _view.findViewById(R.id.secondhandBtn);
         handleAction();
     }
 
@@ -187,6 +188,24 @@ public class TabHomeFragment extends Fragment {
 //                Intent intent = new Intent(_view.getContext(),HHAVActivity.class);
 //                startActivity(intent);
 //                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+
+            }
+        });
+
+        //评论校园按钮点击
+        mCommentSchoolBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(_view.getContext(),CommentSchoolActivity.class);
+                startActivity(intent);
+                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+            }
+        });
+
+        mSecondhandBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
 
             }
         });

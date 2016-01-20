@@ -87,7 +87,7 @@ public class TopBar extends RelativeLayout {
         title = ta.getString(R.styleable.Topbar_ttitle);
 
         buttonMode = ta.getInteger(R.styleable.Topbar_buttonMode, -1);
-        background = getResources().getDrawable(R.drawable.topbar);
+        background = getResources().getDrawable(R.drawable.top_bg);
 
         switch (buttonMode) {
             case 0:  // 0表示有两个button
