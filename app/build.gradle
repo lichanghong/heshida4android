@@ -15,8 +15,8 @@ android {
         applicationId "heshida.haihong.com.heshida"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 15
+        versionName "1.5"
         signingConfig signingConfigs.heshida
     }
     buildTypes {

@@ -237,6 +237,6 @@ public class HHAVActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(HHAVActivity.this,"onDestroy",Toast.LENGTH_LONG).show();
+//        Toast.makeText(HHAVActivity.this,"onDestroy",Toast.LENGTH_LONG).show();
     }
 }

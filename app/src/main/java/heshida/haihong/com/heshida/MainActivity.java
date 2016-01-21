@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
             case 1:
             {
                 topbar1.getLeftButton().setVisibility(View.VISIBLE);
-                topbar1.getRightButton().setVisibility(View.INVISIBLE);
+                topbar1.getRightButton().setVisibility(View.VISIBLE);
                 topbar1.setTitle("河南师范大学");
             }
             break;
@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(MainActivity.this,LoginActivity.class);
                 if (true) //未登陆
                 {
-                    intent.setClass(MainActivity.this,MyHomeActivity.class);
+                    intent.setClass(MainActivity.this,LoginActivity.class);
                     startActivity(intent);
                 }
                 else
@@ -140,6 +140,7 @@ public class MainActivity extends Activity {
                     intent.setClass(MainActivity.this,MyHomeActivity.class);
                     startActivity(intent);
                 }
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
             }
         });
 

@@ -10,9 +10,11 @@
         android:layout_height="50dp"
         android:id="@+id/topbarRegister"
         tools:background="#ffffff"
-        custom:title="Title1"
-        custom:titleTextColor="@android:color/black"
         custom:titleTextSize="16sp"
+        custom:buttonMode="left"
+        custom:leftHeight="40dp"
+        custom:leftMargin="12dp"
+        custom:leftWidth="40dp"
         >
     </heshida.haihong.com.heshida.TopBar>
 
@@ -30,6 +32,7 @@
                 android:textSize="18dp"
                 />
             <EditText
+                android:id="@+id/login_phone"
                 android:hint="手机号码"
                 android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
@@ -42,6 +45,7 @@
                 android:textSize="18dp"
                 />
             <EditText
+                android:id="@+id/login_pwd"
                 android:hint="密码"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="10dp"
@@ -54,17 +58,34 @@
     </TableLayout>
 
     <LinearLayout
-        android:layout_marginLeft="15dp"
+        android:gravity="right"
+        android:layout_marginRight="30dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/login_loginBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:background="@drawable/send_msg1"
             android:text="登录"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/login_registerBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:background="@drawable/send_msg1"
             android:text="注册"/>
     </LinearLayout>
 

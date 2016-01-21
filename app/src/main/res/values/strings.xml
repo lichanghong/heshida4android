@@ -13,7 +13,9 @@
     <string name="title_activity_schedule_setting">ScheduleSettingActivity</string>
     
     
-    <string name="hostname">http://heshidatest.applinzi.com/admin.php/</string>
+    <string name="hostname">http://1.heshidastudent.applinzi.com/admin.php/</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
     <string name="feedback">feedback</string>
     <string name="savelostfound">savelostfound</string>
     <string name="getlostfound">getlostfound</string>
@@ -21,7 +23,8 @@
     <string name="societydetail">societydetail</string>
     <string name="lostfoundblock">lostfoundblock</string>
     <string name="getheshidapage">getheshidapage</string>
-    
+    <string name="checkupdate">app/checkupdate</string>
+
     <string name="title_activity_found">FoundActivity</string>
     <string name="title_activity_school_web">SchoolWebActivity</string>
     <string name="title_activity_hhav">HHAVActivity</string>

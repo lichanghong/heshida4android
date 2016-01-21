@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.jar.Attributes;
 
 import heshida.haihong.com.heshida.R;
+import heshida.haihong.com.heshida.Utils.Http.Reachability;
 import heshida.haihong.com.heshida.Utils.VersionManager;
 import heshida.haihong.com.heshida.Utils.net.Response;
 
@@ -133,8 +134,16 @@ public class TabMoreFragmentTab extends Fragment {
 
     private void checkUpdate()
     {
-        VersionManager versionManager = VersionManager.getInstance(getActivity());
-        versionManager.checkUpdate();
+       if (Reachability.isNetworkAvailable(getActivity()))
+       {
+           VersionManager versionManager = VersionManager.getInstance(getActivity());
+           versionManager.checkUpdate();
+       }
+        else
+       {
+           Toast.makeText(getActivity(), "您好像没网络了哦~", Toast.LENGTH_LONG).show();
+       }
+
     }
 
     private void feedBack() {

@@ -2,6 +2,7 @@ package heshida.haihong.com.heshida.Main;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class SchoolWebActivity extends Activity {
         mTopBar.getLeftButton().setEnabled(true);
         mTopBar.setLeftBackground(R.drawable.backbutton);
         mTopBar.setTitle("河师大网站");
+        mTopBar.setTitleTextColor(Color.WHITE);
         mTopBar.setOnTopbarLeftClickListener(new TopBar.TopbarLeftClickListener() {
             @Override
             public void leftClick() {

@@ -44,7 +44,7 @@ import heshida.haihong.com.heshida.Utils.net.Response;
  * Created by admin on 13-11-23.
  */
 public class TabHomeFragment extends Fragment {
-    private static final String OpenYouMiADCode    = "1451576200";
+    private static final String OpenADCode    = "1451576200";
     boolean hasAD = false;
     View _view;
     Button mWebSchoolBtn,mCommentSchoolBtn,mSecondhandBtn;
@@ -98,7 +98,7 @@ public class TabHomeFragment extends Fragment {
                     loadDataSuccess(response);
 //                    ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
 //                    String responseTime = response.getTime().toString();
-//                    String adTime = OpenYouMiADCode.toString();
+//                    String adTime = OpenADCode.toString();
 //                    if (responseTime.equals(adTime)) {
 //                        adManager.showYouMiAD(_view);
 //                        hasAD = true;
@@ -182,12 +182,10 @@ public class TabHomeFragment extends Fragment {
         mWebSchoolBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VersionManager versionManager = VersionManager.getInstance(getActivity());
-                versionManager.checkUpdate();
-//                Intent intent = new Intent(_view.getContext(),SchoolWebActivity.class);
-//                Intent intent = new Intent(_view.getContext(),HHAVActivity.class);
-//                startActivity(intent);
-//                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+            Intent intent = new Intent(_view.getContext(),SchoolWebActivity.class);
+    //                Intent intent = new Intent(_view.getContext(),HHAVActivity.class);
+            startActivity(intent);
+            getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
 
             }
         });

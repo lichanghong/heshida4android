@@ -21,12 +21,14 @@ import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import heshida.haihong.com.heshida.R;
 
@@ -46,7 +48,7 @@ public class CommentSchoolActivity extends Activity implements OnClickListener {
     ChatMessageListAdapter chatMessageListAdapter;
     List<ChatMessage> l_msg = new ArrayList<ChatMessage>();
     ListView lv_id;
-
+    Button mCommentBackButton;
 
     TextView tv_chat_title;
     @Override
@@ -69,6 +71,19 @@ public class CommentSchoolActivity extends Activity implements OnClickListener {
         lv_id = (ListView)findViewById(R.id.lv_id);
 
         tv_chat_title = (TextView)findViewById(R.id.tv_chat_title);
+        mCommentBackButton = (Button) findViewById(R.id.comment_backbutton);
+        initListener();
+    }
+
+    private void initListener() {
+        mCommentBackButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(CommentSchoolActivity.self,"back",Toast.LENGTH_LONG).show();
+                finish();
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+            }
+        });
     }
 
     @Override
@@ -143,9 +158,6 @@ public class CommentSchoolActivity extends Activity implements OnClickListener {
                                 SpannableString spannableString = new SpannableString(e.code);
                                 spannableString.setSpan(imageSpan, 0, e.code.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-                                Log.v("_____________", "spannableString="+spannableString.toString()+"__index="+index);
-
-
                                 if(index <0 || index >= edit.length()){
                                     edit.append(spannableString);
                                 }else{
@@ -175,17 +187,6 @@ public class CommentSchoolActivity extends Activity implements OnClickListener {
 
         //tv_chat_title.setText(Html.fromHtml("<img src=\""+2130837523+"\" />", imageGetter_resource, null));
     }
-
-	/*final Html.ImageGetter imageGetter_resource = new Html.ImageGetter() {
-		public Drawable getDrawable(String source) {
-			Drawable drawable = null;
-			int rId = Integer.parseInt(source);
-			drawable = getResources().getDrawable(rId);
-			Log.v("", "drawable is null = "+(drawable==null));
-			drawable.setBounds(0, 0, 40,40);//设置显示的图像大小
-			return drawable;
-		};
-	};*/
 
     /**
      * 填充GridView所需要的数据
@@ -391,6 +392,7 @@ public class CommentSchoolActivity extends Activity implements OnClickListener {
             case R.id.tv_send_msg:
                 sendMsg();
                 break;
+
         }
     }
 }

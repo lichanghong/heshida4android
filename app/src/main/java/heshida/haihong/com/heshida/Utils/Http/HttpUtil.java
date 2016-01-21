@@ -56,7 +56,14 @@ public class HttpUtil {
     {
         return getHostname(context)+context.getString(R.string.feedback);
     }
-    
+    public static String getLoginURL(Context context)
+    {
+        return getHostname(context)+context.getString(R.string.login);
+    }
+    public static String getRegisterURL(Context context)
+    {
+        return getHostname(context)+context.getString(R.string.register);
+    }
     public static String saveHotDataURL(Context context)
     {
         return getHostname(context)+context.getString(R.string.savelostfound);
@@ -82,6 +89,10 @@ public class HttpUtil {
     public static String loadMainData(Context context)
     {
         return getHostname(context)+ context.getString(R.string.getheshidapage);
+    }
+    public static String checkupdate(Context context)
+    {
+        return getHostname(context)+ context.getString(R.string.checkupdate);
     }
     
     public static String  getUrl(HashMap<String, String> params) {

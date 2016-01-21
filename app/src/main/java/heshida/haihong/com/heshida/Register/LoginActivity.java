@@ -1,22 +1,116 @@
 package heshida.haihong.com.heshida.Register;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.baidu.android.bba.common.security.AESUtil;
+
+import java.util.HashMap;
 
 import heshida.haihong.com.heshida.R;
 import heshida.haihong.com.heshida.TopBar;
+import heshida.haihong.com.heshida.Utils.AESCipher;
+import heshida.haihong.com.heshida.home.MyHomeActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
+    private static final String AESKey    = "HESHIDAAPPLCHIOSSYGPHPANDOTHERFRIENDHELP";
+
     TopBar mTopBar;
+    Button mLoginBtn,mRegisterBtn;
+    EditText mPhoneText,mPwdText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
+
         initView();
         initData();
+        initListener();
+    }
+
+    private void initListener() {
+        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 String phone = mPhoneText.getText().toString().trim();
+                 String pwd = mPwdText.getText().toString().trim();
+
+                 if (phone.isEmpty() || !RegisterActivity.isMobileNO(phone)) {
+                     mPhoneText.setError("请正确输入手机号登陆");
+                     return;
+                 }
+                 if (pwd.isEmpty() || pwd.length() < 6) {
+                     mPwdText.setError("密码长度至少为6位");
+                     return;
+                 }
+                 try {
+                     String encryptpwd = AESCipher.encrypt(AESKey, pwd).toString();
+                     loginWith(phone, encryptpwd);
+        //                    String decrypt = AESCipher.decrypt(AESKey,encrypt).toString();
+                 } catch (Exception e) {
+                     // TODO Auto-generated catch block
+                     e.printStackTrace();
+                     Toast.makeText(LoginActivity.this,
+                             "系统异常,请反馈给我们", Toast.LENGTH_LONG).show();
+                 }
+
+             }
+         });
+
+        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+            }
+        });
+    }
+
+    private void loginWith(String phone,String encryptpwd)
+    {
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("phone", phone);
+        params.put("password", encryptpwd);
+        final ProgressDialog proDialog = android.app.ProgressDialog.show(LoginActivity.this, "", "登陆中...");
+
+//                    HotManager.saveHotData(FoundActivity.this, params, new HotResponse() {
+//                        @Override
+//                        public void saveHotData(Response response) {
+//                            super.saveHotData(response);
+//                            if (response.getErrno().equals("0")) {
+//                                Toast.makeText(FoundActivity.this, "上传成功,失主会非常感激您的~", Toast.LENGTH_LONG).show();
+//                                proDialog.dismiss();
+//
+//                                overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
+//
+//                            } else {
+//                                Toast.makeText(FoundActivity.this, response.getErrmsg(), Toast.LENGTH_LONG).show();
+//                            }
+//                            proDialog.cancel();
+
+    }
+
+    private  void loginSuccess()
+    {
+        Intent intent = new Intent(LoginActivity.this,MyHomeActivity.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+        finish();
     }
 
     private void initData() {
@@ -25,27 +119,20 @@ public class LoginActivity extends AppCompatActivity {
 
     private void initView() {
         mTopBar = (TopBar) findViewById(R.id.topbarRegister);
+        mTopBar.getLeftButton().setEnabled(true);
+        mTopBar.setTitleTextColor(Color.WHITE);
+        mTopBar.setLeftBackground(R.drawable.backbutton);
+        mTopBar.setOnTopbarLeftClickListener(new TopBar.TopbarLeftClickListener() {
+            @Override
+            public void leftClick() {
+                finish();
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+            }
+        });
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        mLoginBtn = (Button) findViewById(R.id.login_loginBtn);
+        mRegisterBtn = (Button) findViewById(R.id.login_registerBtn);
+        mPhoneText = (EditText) findViewById(R.id.login_phone);
+        mPwdText = (EditText) findViewById(R.id.login_pwd);
     }
 }

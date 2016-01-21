@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -95,8 +96,8 @@ public class VersionManager {
     // 获取当前软件版本
     final int versionCode = getVersionCode(mActivity);
     // 把version.xml放到网络上，然后获取文件信息
-    HttpUtil.get("http://1.heshidastudent.applinzi.com/admin.php/app/checkupdate",
-            new JsonHttpResponseHandler() {
+    String url = HttpUtil.checkupdate(mActivity);
+    HttpUtil.get(url, new JsonHttpResponseHandler() {
                 @Override
                 public void onSuccess(JSONObject jsonObject) {
                     super.onSuccess(jsonObject);
@@ -120,6 +121,13 @@ public class VersionManager {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
+                }
+
+                @Override
+                protected void handleFailureMessage(Throwable throwable, String s) {
+                    super.handleFailureMessage(throwable, s);
+                    Toast.makeText(mActivity, "检测失败,请稍后重试", Toast.LENGTH_LONG).show();
 
                 }
 
