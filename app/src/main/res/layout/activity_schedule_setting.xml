@@ -4,7 +4,7 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
-    <heshida.haihong.com.heshida.TopBar
+    <group.haihong.com.stu.TopBar
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/topbarSchedule"
@@ -19,7 +19,7 @@
         custom:titleTextColor="@android:color/black"
         custom:titleTextSize="23sp"
         >
-    </heshida.haihong.com.heshida.TopBar>
+    </group.haihong.com.stu.TopBar>
 
     <LinearLayout
         android:id="@+id/selectWeekLayout"

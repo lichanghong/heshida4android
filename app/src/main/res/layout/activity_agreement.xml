@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="group.haihong.com.stu.More.AgreementActivity">
+    <group.haihong.com.stu.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topBarAgreement"
+        custom:buttonMode="left"
+        custom:leftHeight="40dp"
+        custom:rightHeight="35dp"
+        custom:leftMargin="12dp"
+        custom:leftWidth="40dp"
+        custom:title="Title1"
+        custom:titleTextColor="@android:color/black"
+        custom:titleTextSize="16sp"
+        >
+    </group.haihong.com.stu.TopBar>
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+        android:text="@string/agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/android-async-http-1.4.3.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="f70e680861fdf9449819003e7799a4e9aca047f8">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.3-f858c31d39a616f1180de88c0bd1b18404b9c194.jar" />
-    </item>
-    <item
         jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/locSDK_6.13.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="89074d1026c4938136ae6922ac9e7b0130dc27d4">
         <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/locSDK_6.13-b4456f579ea844701a1d49ebda90f7b3561a8c72.jar" />
+    </item>
+    <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/android-async-http-1.4.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="f70e680861fdf9449819003e7799a4e9aca047f8">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.3-f858c31d39a616f1180de88c0bd1b18404b9c194.jar" />
     </item>
     <item
         jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
@@ -30,6 +30,13 @@
         <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-f26da63086c9b8ef7a50016bdd2d595d0a5873c0.jar" />
     </item>
     <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/open_sdk_r5509.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="538ea8fb21ea76e8cb424598ac38127cb3344d79">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/open_sdk_r5509-cc4ec47bf37228686fc7a528cdadda29e0c034f1.jar" />
+    </item>
+    <item
         jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/domob_android_sdk.jar"
         jumboMode="false"
         revision="23.0.0"
@@ -44,6 +51,13 @@
         <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_appx_android_2.0.0-5b545d7d05722ff21274f721863ba5c35872573b.jar" />
     </item>
     <item
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_cuid.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="58de9ecfba229dbb2c3eb3f45dbe284ba58100ea">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_cuid-3caafa361f39bfbb69cf976dca6c61778289899b.jar" />
+    </item>
+    <item
         jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/AppOffer_2.4.2.jar"
         jumboMode="false"
         revision="23.0.0"
@@ -51,11 +65,11 @@
         <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/AppOffer_2.4.2-61fd8306b76b16fdc90f6e6b18d3a8312a21ff8e.jar" />
     </item>
     <item
-        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/baidu_cuid.jar"
+        jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/mta-sdk-1.6.2.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="58de9ecfba229dbb2c3eb3f45dbe284ba58100ea">
-        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/baidu_cuid-3caafa361f39bfbb69cf976dca6c61778289899b.jar" />
+        sha1="c184c69f43b1fe46390f7123717c65bd844bccb6">
+        <dex dex="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/build/intermediates/pre-dexed/debug/mta-sdk-1.6.2-a50422a10e4d813e03f2bc7fd8a4cbb6b0cf01ac.jar" />
     </item>
     <item
         jar="/Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/libs/YoumiSdk_v5.3.1_2016-01-05.jar"

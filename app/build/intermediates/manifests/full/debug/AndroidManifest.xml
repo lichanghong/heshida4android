@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="heshida.haihong.com.heshida"
-    android:versionCode="15"
-    android:versionName="1.5" >
+    package="group.haihong.com.stu"
+    android:versionCode="10"
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -87,7 +87,7 @@
         <!-- ↑↑↑ 有米  ↑↑↑ -->
 
 
-        <!-- ↑↑↑ 奇虎  ↑↑↑ -->
+        <!-- ↓↓↓ 奇虎  ↓↓↓ -->
         <service
             android:name="com.qhad.ads.sdk.service.QhAdService"
             android:enabled="true"
@@ -101,6 +101,27 @@
         <!-- ↑↑↑ 奇虎  ↑↑↑ -->
 
 
+        <!-- ↓↓↓ 腾讯sdk ↓↓↓ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105132594" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ↑↑↑ 腾讯sdk  ↑↑↑ -->
+
+
         <!-- <service -->
         <!-- android:name="com.baidu.location.f" -->
         <!-- android:enabled="true" -->
@@ -108,8 +129,7 @@
         <!-- </service> -->
 
         <activity
-            android:name="heshida.haihong.com.heshida.MainActivity"
-            android:label="@string/app_name"
+            android:name="group.haihong.com.stu.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -118,54 +138,58 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.home.JokeActivity"
+            android:name="group.haihong.com.stu.home.JokeActivity"
             android:label="@string/title_activity_joke"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.Register.RegisterActivity"
+            android:name="group.haihong.com.stu.Register.RegisterActivity"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.Register.LoginActivity"
+            android:name="group.haihong.com.stu.Register.LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.home.MyHomeActivity"
+            android:name="group.haihong.com.stu.home.MyHomeActivity"
             android:label="@string/title_activity_my_home"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.Groups.GroupDetailActivity"
+            android:name="group.haihong.com.stu.Groups.GroupDetailActivity"
             android:label="@string/title_activity_group_detail"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.Main.ScheduleSettingActivity"
+            android:name="group.haihong.com.stu.Main.ScheduleSettingActivity"
             android:label="@string/title_activity_schedule_setting"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.LostAndFound.FoundActivity"
+            android:name="group.haihong.com.stu.LostAndFound.FoundActivity"
             android:label="@string/title_activity_found"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.Main.SchoolWebActivity"
+            android:name="group.haihong.com.stu.Main.SchoolWebActivity"
             android:label="@string/title_activity_school_web"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.AV.HHAVActivity"
+            android:name="group.haihong.com.stu.AV.HHAVActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_hhav" >
         </activity>
         <activity
-            android:name="heshida.haihong.com.heshida.Comment.CommentSchoolActivity"
+            android:name="group.haihong.com.stu.Comment.CommentSchoolActivity"
             android:label="@string/title_activity_comment_school"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="group.haihong.com.stu.More.AgreementActivity"
+            android:label="@string/title_activity_agreement" >
         </activity>
     </application>
 

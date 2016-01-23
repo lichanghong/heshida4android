@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <heshida.haihong.com.heshida.TopBar
+        <group.haihong.com.stu.TopBar
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/hhav_tabbar"
@@ -28,7 +28,7 @@
             custom:titleTextColor="@android:color/black"
             custom:titleTextSize="16sp"
             >
-        </heshida.haihong.com.heshida.TopBar>
+        </group.haihong.com.stu.TopBar>
         <LinearLayout
             android:background="#888888"
             android:layout_width="match_parent"

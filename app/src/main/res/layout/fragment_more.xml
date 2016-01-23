@@ -49,5 +49,21 @@
     </RelativeLayout>
 
 
+    <Button
+        android:id="@+id/agreementBtn"
+        android:text="Stu服务使用协议"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="20sp" />
+
+    <TextView
+        android:text="Copyright ©2015-2017 Stu"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

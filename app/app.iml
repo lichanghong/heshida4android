@@ -93,6 +93,7 @@
     <orderEntry type="library" exported="" name="android-async-http-1.4.3" level="project" />
     <orderEntry type="library" exported="" name="domob_android_sdk" level="project" />
     <orderEntry type="library" exported="" name="YoumiSdk_v5.3.1_2016-01-05" level="project" />
+    <orderEntry type="library" exported="" name="mta-sdk-1.6.2" level="project" />
     <orderEntry type="library" exported="" name="qhad_0.1.12.1113" level="project" />
     <orderEntry type="library" exported="" name="YoumiSdk_v5.5.1_2016-01-05" level="project" />
     <orderEntry type="library" exported="" name="baidu_appx_android_2.0.0" level="project" />
@@ -102,6 +103,7 @@
     <orderEntry type="library" exported="" name="locSDK_6.13" level="project" />
     <orderEntry type="library" exported="" name="YoumiSdk_v5.3.0_2015-12-28" level="project" />
     <orderEntry type="library" exported="" name="universal-image-loader-1.9.5" level="project" />
+    <orderEntry type="library" exported="" name="open_sdk_r5509" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="baidu_cuid" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.0.0" level="project" />

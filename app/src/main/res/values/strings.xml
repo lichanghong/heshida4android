@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">河南师范</string>
-    
-    <string name="home_top_title">河南师范大学</string>
+    <string name="app_name">Stu</string>
+    <string name="home_top_title">STU</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_joke">joke</string>
     
@@ -11,18 +10,17 @@
     <string name="title_activity_my_home">MyHomeActivity</string>
     <string name="title_activity_group_detail">GroupDetailActivity</string>
     <string name="title_activity_schedule_setting">ScheduleSettingActivity</string>
-    
-    
+
     <string name="hostname">http://1.heshidastudent.applinzi.com/admin.php/</string>
-    <string name="login">login</string>
-    <string name="register">register</string>
-    <string name="feedback">feedback</string>
-    <string name="savelostfound">savelostfound</string>
-    <string name="getlostfound">getlostfound</string>
-    <string name="societynames">societynames</string>
-    <string name="societydetail">societydetail</string>
-    <string name="lostfoundblock">lostfoundblock</string>
-    <string name="getheshidapage">getheshidapage</string>
+    <string name="login">admin/login</string>
+    <string name="register">admin/register</string>
+    <string name="feedback">admin/feedback</string>
+    <string name="savelostfound">admin/savelostfound</string>
+    <string name="getlostfound">admin/getlostfound</string>
+    <string name="societynames">admin/societynames</string>
+    <string name="societydetail">admin/societydetail</string>
+    <string name="lostfoundblock">admin/lostfoundblock</string>
+    <string name="getheshidapage">admin/getheshidapage</string>
     <string name="checkupdate">app/checkupdate</string>
 
     <string name="title_activity_found">FoundActivity</string>
@@ -32,4 +30,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="xiaoyuan_dian_ping">校园点评</string>
     <string name="title_activity_comment_school">CommentSchoolActivity</string>
+    <string name="title_activity_agreement">AgreementActivity</string>
 </resources>

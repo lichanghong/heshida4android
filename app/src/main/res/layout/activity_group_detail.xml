@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <heshida.haihong.com.heshida.TopBar
+    <group.haihong.com.stu.TopBar
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/topbarGroup"
@@ -17,7 +17,7 @@
         custom:titleTextColor="@android:color/black"
         custom:titleTextSize="16sp"
         >
-    </heshida.haihong.com.heshida.TopBar>
+    </group.haihong.com.stu.TopBar>
     <EditText
         android:id="@+id/groupdetail_edittext"
         android:layout_width="match_parent"
