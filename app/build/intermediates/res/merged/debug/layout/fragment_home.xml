@@ -136,28 +136,28 @@
                     android:layout_weight="1"
                     >
                 </Button>
-                <Button
-                    android:id="@+id/commentschoolBtn"
-                    android:textColor="#0066ff"
-                    android:background="@android:color/transparent"
-                    android:layout_height="match_parent"
-                    android:text="点评校园"
-                    android:drawableTop="@drawable/dianping"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    >
-                </Button>
-                <Button
-                    android:id="@+id/secondhandBtn"
-                    android:textColor="#0066ff"
-                    android:background="@android:color/transparent"
-                    android:layout_height="match_parent"
-                    android:drawableTop="@drawable/secondly"
-                    android:text="校园二手"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    >
-                </Button>
+                <!--<Button-->
+                    <!--android:id="@+id/commentschoolBtn"-->
+                    <!--android:textColor="#0066ff"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="点评校园"-->
+                    <!--android:drawableTop="@drawable/dianping"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!-->-->
+                <!--</Button>-->
+                <!--<Button-->
+                    <!--android:id="@+id/secondhandBtn"-->
+                    <!--android:textColor="#0066ff"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:drawableTop="@drawable/secondly"-->
+                    <!--android:text="校园二手"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!-->-->
+                <!--</Button>-->
 
             </LinearLayout>
         </LinearLayout>

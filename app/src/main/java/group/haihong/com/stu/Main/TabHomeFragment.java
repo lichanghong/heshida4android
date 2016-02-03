@@ -86,7 +86,8 @@ public class TabHomeFragment extends Fragment {
 //                    String responseTime = response.getTime().toString();
 //                    String adTime = OpenADCode.toString();
 //                    if (responseTime.equals(adTime)) {
-//                        adManager.showYouMiAD(_view);
+//                    adManager.showYouMiAD(_view);
+//                    adManager.showQHAD(_view);
 //                        hasAD = true;
 //                    } else if (response.getTime().toString().equals(OpenDuoMengADCode.toString())) {
 //                        adManager.showDuoMengAD(_view);
@@ -159,8 +160,8 @@ public class TabHomeFragment extends Fragment {
         mScrollView = (ScrollView) _view.findViewById(R.id.mainScrollView);
         mGallery    = (LinearLayout) _view.findViewById(R.id.homegallery);
         mWebSchoolBtn = (Button) _view.findViewById(R.id.webSchoolBtn);
-        mCommentSchoolBtn = (Button) _view.findViewById(R.id.commentschoolBtn);
-        mSecondhandBtn = (Button) _view.findViewById(R.id.secondhandBtn);
+//        mCommentSchoolBtn = (Button) _view.findViewById(R.id.commentschoolBtn);
+//        mSecondhandBtn = (Button) _view.findViewById(R.id.secondhandBtn);
         handleAction();
     }
 
@@ -177,23 +178,23 @@ public class TabHomeFragment extends Fragment {
         });
 
         //评论校园按钮点击
-        mCommentSchoolBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(_view.getContext(),CommentSchoolActivity.class);
-                startActivity(intent);
-                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
-            }
-        });
-
-        //校园二手按钮点击
-        mSecondhandBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TencentController tencentController = new TencentController(getActivity());
-                tencentController.loginTencent();
-            }
-        });
+//        mCommentSchoolBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(_view.getContext(),CommentSchoolActivity.class);
+//                startActivity(intent);
+//                getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+//            }
+//        });
+//
+//        //校园二手按钮点击
+//        mSecondhandBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                TencentController tencentController = new TencentController(getActivity());
+//                tencentController.loginTencent();
+//            }
+//        });
     }
 
 

@@ -213,14 +213,14 @@ ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/sr
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:141:13-60
 	android:name
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:140:13-54
-activity#group.haihong.com.stu.Register.LoginActivity
+activity#group.haihong.com.stu.Register.Login.LoginActivity
 ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:144:9-148:20
 	android:screenOrientation
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:147:13-49
 	android:label
 		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:146:13-57
 	android:name
-		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:145:13-51
+		ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:145:13-57
 activity#group.haihong.com.stu.home.MyHomeActivity
 ADDED from /Users/lichanghong/360yun11976/Heshida_android/heshida4android/app/src/main/AndroidManifest.xml:149:9-153:20
 	android:screenOrientation

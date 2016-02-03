@@ -12,7 +12,7 @@ import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import group.haihong.com.stu.Register.LoginActivity;
+import group.haihong.com.stu.Register.Login.LoginActivity;
 import group.haihong.com.stu.Vendor.StuConstants;
 import group.haihong.com.stu.home.MyHomeActivity;
 

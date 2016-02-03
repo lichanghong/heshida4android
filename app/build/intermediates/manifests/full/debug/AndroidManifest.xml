@@ -148,7 +148,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="group.haihong.com.stu.Register.LoginActivity"
+            android:name="group.haihong.com.stu.Register.Login.LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait" >
         </activity>

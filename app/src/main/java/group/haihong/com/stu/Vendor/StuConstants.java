@@ -4,6 +4,7 @@ package group.haihong.com.stu.Vendor;
  * Created by lichanghong on 1/22/16.
  */
 public class StuConstants {
+    public static final String AESKey    = "HESHIDAAPPLCHIOSSYGPHPANDOTHERFRIENDHELP";
 
     public static String App_NAME ="河南师范大学";
     public static  String Group_NAME = "社团";

@@ -142,7 +142,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".Register.LoginActivity"
+            android:name=".Register.Login.LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait" >
         </activity>

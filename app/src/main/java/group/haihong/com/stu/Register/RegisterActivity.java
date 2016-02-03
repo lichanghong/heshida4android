@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -17,6 +18,9 @@ import java.util.regex.Pattern;
 
 import group.haihong.com.stu.R;
 import group.haihong.com.stu.TopBar;
+import group.haihong.com.stu.Utils.AESCipher;
+import group.haihong.com.stu.Utils.net.Response;
+import group.haihong.com.stu.Vendor.StuConstants;
 import group.haihong.com.stu.home.MyHomeActivity;
 
 public class RegisterActivity extends Activity {
@@ -72,7 +76,7 @@ public class RegisterActivity extends Activity {
             pwd = mPwd.getText().toString();
             confirmpwd = mConfirmPwd.getText().toString();
 
-            if (phone.isEmpty() && isMobileNO(phone)) {
+            if (phone.isEmpty() || !isMobileNO(phone)) {
                 mPhone.setError("请正确输入手机号");
                 return;
             }
@@ -88,30 +92,33 @@ public class RegisterActivity extends Activity {
                 mConfirmPwd.setError("两次输入密码不一样");
                 return;
             }
+            String encryptpwd = null;
+            try {
+                encryptpwd = AESCipher.encrypt(StuConstants.AESKey, pwd).toString();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             HashMap<String, String> params = new HashMap<String, String>();
             params.put("phone", phone);
-            params.put("password", pwd);
+            params.put("password", encryptpwd);
+            params.put("registertime", String.valueOf(System.currentTimeMillis()));
             final ProgressDialog proDialog = android.app.ProgressDialog.show(RegisterActivity.this, "", "注册中...");
-//                    HotManager.saveHotData(FoundActivity.this, params, new HotResponse() {
-//                        @Override
-//                        public void saveHotData(Response response) {
-//                            super.saveHotData(response);
-//                            if (response.getErrno().equals("0")) {
-//                                Toast.makeText(FoundActivity.this, "上传成功,失主会非常感激您的~", Toast.LENGTH_LONG).show();
-//                                proDialog.dismiss();
-                                finish();
-            Intent intent = new Intent(RegisterActivity.this,MyHomeActivity.class);
-            startActivity(intent);
-            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
-
-//                                overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
-//
-//                            } else {
-//                                Toast.makeText(FoundActivity.this, response.getErrmsg(), Toast.LENGTH_LONG).show();
-//                            }
-//                            proDialog.cancel();
-//
-//    });
+            RegisterManager.register(RegisterActivity.this,params,new RegisterResponse(){
+                @Override
+                public void register(Response response) {
+                    super.register(response);
+                    if (response.getErrno().equals("0")) {
+                        Toast.makeText(RegisterActivity.this, "恭喜您！注册成功", Toast.LENGTH_LONG).show();
+                        finish();
+                        Intent intent = new Intent(RegisterActivity.this,MyHomeActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+                     } else {
+                            Toast.makeText(RegisterActivity.this, response.getErrmsg(), Toast.LENGTH_LONG).show();
+                    }
+                        proDialog.cancel();
+                }
+            });
         }
 
     }

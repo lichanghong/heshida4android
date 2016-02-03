@@ -16,10 +16,6 @@ import group.haihong.com.stu.Utils.net.Response;
 public class FeedbackRequest {
     Context context;
 
-    public void FeedbackContext(Context context) {
-        this.context = context;
-    }
-
     public void feedback(FeedbackResponse response,String param)
     {
         this.feedback_(response,param);
@@ -45,7 +41,7 @@ public class FeedbackRequest {
 
     private void processresult(final FeedbackResponse response,JSONObject jsonObject)
     {
-        String errno = "", errmsg = "";
+        String errno = "1", errmsg = "服务器错误";
         try {
             errmsg = jsonObject.getString("errmsg");
             errno = jsonObject.getString("errno");

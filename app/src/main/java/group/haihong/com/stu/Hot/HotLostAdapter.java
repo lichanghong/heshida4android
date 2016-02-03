@@ -31,7 +31,7 @@ public class HotLostAdapter extends BaseAdapter {
     @Override
     public int getItemViewType(int position) {
         Map<String, String> keyValuePair = mHotList.get(position);
-        if (keyValuePair.get("losted").toString().equals("1"))
+        if (keyValuePair.get("losted").toString().equals("2"))
         {
             return TYPE_2;
         }
