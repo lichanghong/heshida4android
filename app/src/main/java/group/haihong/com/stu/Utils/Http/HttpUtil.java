@@ -8,6 +8,7 @@ import com.loopj.android.http.BinaryHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -116,6 +117,7 @@ public class HttpUtil {
             }
             stringBuilder.append(sb.toString());
         }
-        return stringBuilder.toString();
+        final String encodedURL = URLEncoder.encode(stringBuilder.toString());
+        return encodedURL;
     }
 }

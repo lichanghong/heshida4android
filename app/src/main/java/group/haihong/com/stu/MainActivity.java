@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
             case 1:
             {
                 topbar1.getLeftButton().setVisibility(View.VISIBLE);
-                topbar1.getRightButton().setVisibility(View.VISIBLE);
+                topbar1.getRightButton().setVisibility(View.INVISIBLE);
                 topbar1.setTitle(StuConstants.App_NAME);
             }
             break;

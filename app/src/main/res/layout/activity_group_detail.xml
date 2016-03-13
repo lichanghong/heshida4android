@@ -14,7 +14,7 @@
         custom:leftMargin="12dp"
         custom:leftWidth="40dp"
         custom:title="社团简介"
-        custom:titleTextColor="@android:color/black"
+        custom:titleTextColor="@android:color/white"
         custom:titleTextSize="16sp"
         >
     </group.haihong.com.stu.TopBar>

@@ -62,24 +62,28 @@ public class FoundActivity extends Activity {
                     params.put("location",location);
                     params.put("line", line);
                     params.put("losted",losted+"");
-                    final ProgressDialog proDialog = android.app.ProgressDialog.show(FoundActivity.this, "失主会非常赶紧您的~", "上传中...");
-                    HotManager.saveHotData(FoundActivity.this, params, new HotResponse() {
+                    String message = "小伙伴们会全力帮您找的~";
+                    if (losted)
+                    {
+                        message = "失主会非常赶紧您的~";
+                    }
+                    final ProgressDialog proDialog = android.app.ProgressDialog.show(FoundActivity.this, "", "上传中...");
+                    HotResponse hotResponse = new HotResponse(){
                         @Override
                         public void saveHotData(Response response) {
                             super.saveHotData(response);
                             if (response.getErrno().equals("0")) {
-                                Toast.makeText(FoundActivity.this, "上传成功,失主会非常感激您的~", Toast.LENGTH_LONG).show();
+                                Toast.makeText(FoundActivity.this, "上传成功", Toast.LENGTH_LONG).show();
                                 proDialog.dismiss();
                                 finish();
                                 overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
-
                             } else {
                                 Toast.makeText(FoundActivity.this, response.getErrmsg(), Toast.LENGTH_LONG).show();
                             }
                             proDialog.cancel();
-
                         }
-                    });
+                    };
+                    HotManager.saveHotData(FoundActivity.this, params,hotResponse);
                 }
             }
         });

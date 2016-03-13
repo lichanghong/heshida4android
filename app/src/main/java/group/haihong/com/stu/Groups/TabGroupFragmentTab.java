@@ -82,7 +82,7 @@ public class TabGroupFragmentTab extends Fragment {
                     mAdapter.notifyDataSetChanged();
                 }
                 else {
-                    Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(_view.getContext(), response.getErrmsg(), Toast.LENGTH_LONG).show();
                 }
                 proDialog.dismiss();
             }

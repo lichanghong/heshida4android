@@ -1,6 +1,7 @@
 package group.haihong.com.stu.Groups;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.EditText;
@@ -62,6 +63,7 @@ public class GroupDetailActivity extends Activity {
         mTopBar = (TopBar) findViewById(R.id.topbarGroup);
         mTopBar.getLeftButton().setEnabled(true);
         mTopBar.setLeftBackground(R.drawable.backbutton);
+        mTopBar.setTitleTextColor(Color.WHITE);
         mTopBar.setOnTopbarLeftClickListener(new TopBar.TopbarLeftClickListener() {
             @Override
             public void leftClick() {

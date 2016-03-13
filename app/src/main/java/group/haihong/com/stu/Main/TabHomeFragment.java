@@ -71,8 +71,6 @@ public class TabHomeFragment extends Fragment {
     }
 
     private void initData() {
-        ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
-        adManager.showQHAD(_view);
         mURLs = new ArrayList<>();
         mUniversalImageUtil = new UniversalImageUtil(_view.getContext(),getActivity());
         mUniversalImageUtil.configImageLoader();
@@ -82,21 +80,15 @@ public class TabHomeFragment extends Fragment {
                 super.loadMainData(response);
                 if (response.getErrno().equals("0")) {
                     loadDataSuccess(response);
-//                    ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
-//                    String responseTime = response.getTime().toString();
-//                    String adTime = OpenADCode.toString();
-//                    if (responseTime.equals(adTime)) {
-//                    adManager.showYouMiAD(_view);
-//                    adManager.showQHAD(_view);
-//                        hasAD = true;
-//                    } else if (response.getTime().toString().equals(OpenDuoMengADCode.toString())) {
-//                        adManager.showDuoMengAD(_view);
-//                        hasAD = true;
-//                    } else hasAD = false;
-
-
+                    ADManager adManager = ADManager.getInstance(_view.getContext(), getActivity());
+                    String responseTime = response.getTime().toString();
+                    String adTime = OpenADCode.toString();
+                    if (responseTime.equals(adTime)) {
+                         adManager.showAD(_view);
+                         hasAD = true;
+                    } else hasAD = false;
                 } else {
-                    Toast.makeText(getActivity(), response.getErrmsg(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(_view.getContext(), response.getErrmsg(), Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -30,7 +30,7 @@ public class HotRequest {
 
 
 
-    public void saveHotData(HotResponse response,HashMap<String,String> params ) {
+    public void saveHotData(final HotResponse response,HashMap<String,String> params ) {
         saveHotData_(response, params);
     }
 
@@ -49,6 +49,7 @@ public class HotRequest {
                 super.onFailure(throwable, jsonObject);
                 hotresult(response, jsonObject);
             }
+
         });
     }
 

@@ -20,7 +20,11 @@ public class ADManager {
         this.mContext = mContext;
         this.mActivity = mActivity;
     }
-
+    public void showAD(View view)
+    {
+        ADManager manager =  ADManager.getInstance(mContext, mActivity);
+        manager.showBaiduAD(view);
+    }
     private static ADManager sSingleton = null;
     public static synchronized ADManager getInstance(Context context,Activity mActivity) {
         if (sSingleton == null) {
